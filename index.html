@@ -16,64 +16,53 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <!-- Load BOOTSTRAP CSS & JS (including jQuery) from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
             crossorigin="anonymous"></script>
+    <!-- Load handlebars from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 </head>
 
 <body>
-<!-- TOP SECTION OF THE HOME PAGE - LOGO, TITLE, NAVIGATION BAR, RSS FEED, SUBSCRIPTION... -->
+
+<div id="top-placeholder">
+<!-- Placeholder div to be populated with HTML from top.html
+(top of the page i.e. navigation bar and extras, is the same for all pages, therefore no reason to copy & paste it) -->
+</div>
+
+<script>
+$(function(){
+  $("#top-placeholder").load("top.html");
+});
+</script>
+
 <div class="container-fluid no-padding">
-    <div class="row top-section">
-        <!-- Data Engineering Daily Logo Box -->
-        <div class="col-3">
-            <a href="">
-                <img id="data-engineering-daily-logo" src="img/logo.png"
-                     alt="The Data Engineering Daily Website Logo">
-            </a>
+    <div class="row">
+        <div class="col-12 rss-feed-box">
+            <marquee behavior="scroll" scrollamount="10" direction="right" width="100%">
+                <span>
+                    test
+                </span>
+            </marquee>
         </div>
-        <!-- Navigation Bar -->
-        <div class="col-6">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="row">
-                    <div class="col nav-button-div">
-                        <a class="nav-link nav-button" href="about.html"><span>About </span></a>
-                    </div>
-                    <div class="col nav-button-div">
-                        <a class="nav-link nav-button" href="news.html"><span>News </span></a>
-                    </div>
-                    <div class="col nav-button-div">
-                        <a class="nav-link nav-button" href="events.html"><span>Events </span></a>
-                    </div>
-                    <div class="col nav-button-div">
-                        <a class="nav-link nav-button" href="guides.html"><span>Guides & Tutorials </span></a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <!-- Subscription, Time and Search -->
-        <div class="col-3">
-            <button>Subscribe to our daily digest!</button>
-            <div class="current-date-and-time">
-                <span id="current-date"></span>
-                <span id="current-time"></span>
-                <script defer>
-                    document.getElementById("current-date").innerHTML = new Date().toLocaleDateString();
-                    document.getElementById("current-time").innerHTML = new Date().toLocaleTimeString();
-                </script>
-            </div>
+        <div class="row">
+            <h2>
+                Welcome to Data Engineering Daily - Your #1 source for everything Data Engineering, Open Source and
+                more!
+            </h2>
         </div>
     </div>
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 </div>
-<p>Welcome to Data Engineering Daily - Your #1 source for everything Data Engineering, Open Source and more!</p>
-<script src="js/vendor/modernizr-3.11.2.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+
 </body>
 
 </html>

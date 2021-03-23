@@ -1,10 +1,24 @@
 .top-section {
   background-color: rgba(38, 76, 114, 0.15);
-  border-bottom: 1px solid midnightblue;
+  border-bottom: 2px outset cadetblue;
+}
+
+#data-engineering-daily-logo {
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 1rem;
+  margin: 1rem;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#data-engineering-daily-logo:hover {
+  opacity: 0.9;
+  background-color: lightblue;
 }
 
 .nav-button-div {
-  margin: 5rem 1rem;
+  margin: 5rem 0.5rem;
 }
 
 .nav-button {
@@ -15,6 +29,7 @@
   font-size: 1.5rem;
   text-align: center;
   white-space:nowrap;
+  box-shadow: 0 2px 4px rgba(38, 114, 114, 0.3);
   transition: all 0.4s;
 }
 
@@ -48,16 +63,7 @@
   border-radius: 10px;
 }
 
-#data-engineering-daily-logo {
-  border: 2px solid black;
-  border-radius: 25px;
-  padding: 1rem;
-  margin: 1rem;
-  opacity: 1;
-  transition: 0.5s;
-}
-
-#data-engineering-daily-logo:hover {
-  opacity: 0.9;
-  background-color: lightblue;
+.rss-feed-box {
+  background-color: rgba(63, 191, 191, 0.3);
+  border-bottom: 2px outset cadetblue;
 }

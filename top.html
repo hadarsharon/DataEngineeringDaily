@@ -1,0 +1,43 @@
+<!-- TOP SECTION OF THE PAGE - LOGO, TITLE, NAVIGATION BAR, SUBSCRIPTION... -->
+<div id="top" class="container-fluid no-padding">
+    <div class="row top-section">
+        <!-- Data Engineering Daily Logo Box -->
+        <div class="col-3">
+            <a href="">
+                <img id="data-engineering-daily-logo" src="img/logo.png"
+                     alt="The Data Engineering Daily Website Logo">
+            </a>
+        </div>
+        <!-- Navigation Bar -->
+        <div class="col-6">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="row">
+                    <div class="col nav-button-div">
+                        <a class="nav-link nav-button" href="about.html"><span>About </span></a>
+                    </div>
+                    <div class="col nav-button-div">
+                        <a class="nav-link nav-button" href="news.html"><span>News </span></a>
+                    </div>
+                    <div class="col nav-button-div">
+                        <a class="nav-link nav-button" href="events.html"><span>Events </span></a>
+                    </div>
+                    <div class="col nav-button-div">
+                        <a class="nav-link nav-button" href="guides.html"><span>Guides & Tutorials </span></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Subscription, Time and Search -->
+        <div class="col-3">
+            <button>Subscribe to our daily digest!</button>
+            <div class="current-date-and-time">
+                <span id="current-date"></span>
+                <span id="current-time"></span>
+                <script defer>
+                    document.getElementById("current-date").innerHTML = new Date().toLocaleDateString();
+                    document.getElementById("current-time").innerHTML = new Date().toLocaleTimeString();
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
