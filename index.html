@@ -1,35 +1,41 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Data Engineering Daily</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <meta name="theme-color" content="#fafafa">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fafafa">
+    <meta name="description" content="Data Engineering Daily is a technology news website operating since 2016,
+    focusing primarily on covering data-related technology and Open Source tools.">
+    <meta name="author" content="Hadar Sharon">
+    <meta name="keywords" content="Data, Engineering, Data Engineering, Open Source, Technology, Programming, News, Events, Updates">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Data Engineering Daily</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <nav>
-    <a href="/html/">Home</a>
-    <a href="/html/">About</a>
-    <a href="/css/">News</a>
-    <a href="/js/">Events</a>
-    <a href="/python/">Guides & Tutorials</a>
-  </nav>
-  <p>Welcome to Data Engineering Daily - Your #1 source for everything Data Engineering, Open Source and more!</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+<!-- TOP SECTION OF THE PAGE - NAVIGATION BEER, RSS FEED, SUBSCRIPTION ETC. -->
+<div id="top-section">
+    <img id="data-engineering-daily-logo" src="img/logo.png" alt="The Data Engineering Daily Website Logo">
+    <nav>
+        <!--<a href="/">Home</a>-->
+        <a href="about.html">About</a>
+        <a href="news.html">News</a>
+        <a href="events.html">Events</a>
+        <a href="guides.html">Guides & Tutorials</a>
+    </nav>
+    <div>
+        <button>Subscribe to our daily digest!</button>
+    </div>
+</div>
+<p>Welcome to Data Engineering Daily - Your #1 source for everything Data Engineering, Open Source and more!</p>
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>
