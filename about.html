@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fafafa">
+    <meta name="description" content="Data Engineering Daily is a technology news website operating since 2016,
+    focusing primarily on covering data-related technology and Open Source tools.">
+    <meta name="author" content="Hadar Sharon">
+    <meta name="keywords"
+          content="Data, Engineering, Data Engineering, Open Source, Technology, Programming, News, Events, Updates">
+    <meta name="robots" content="noindex,nofollow">
     <title>About Us</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Load BOOTSTRAP CSS & JS (including jQuery) from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Load handlebars from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 </head>
 <body>
-<h1>Background</h1>
-<p>
-    Data Engineering Daily, operating since 2016, is a primarily data-oriented technology news website, founded with the goal
-    of being the leading source for Data-related news, as well as providing guides, tutorials and other supplementary
-    orientation material for aspiring & experienced Data Engineers alike.
-    <br>
-    Since the site's inception, we have been active in promoting and covering numerous Data Engineering and/or Open Source related conferences -
-    namely:&nbsp;
-    <a href="http://ieee-icde.org/">The IEEE International Conference on Data Engineering (ICDE)</a>,&nbsp;
-    <a href="https://events.linuxfoundation.org/open-source-summit-europe/">Open Source Summit</a> (formerly known as LinuxCon), and&nbsp;
-    <a href="https://www.devconf.info/">DevConf</a>, among others.
-    <br>
-    Perhaps more importantly - site readers are also encouraged to apply their knowledge and contribute to Open Source
-    Data-related projects!&nbsp;
-    <br>
-    Some well-known examples of aforementioned projects include:&nbsp;
-    <a href="https://airflow.apache.org/">Apache Airflow</a>,&nbsp;
-    <a href="https://greatexpectations.io/">Great Expectations</a> and&nbsp;
-    <a href="https://julialang.org/">the Julia Programming Language</a>).
-    <br>
-    <strong>(One could get acquainted, at his/her discretion, with such technologies & tools by exploring our Guides & Tutorials section</strong>
-</p>
-<h1>Awards & Acclaims</h1>
-<h1>Get in touch with us</h1>
+<div id="top-placeholder">
+    <!-- Placeholder div to be populated with HTML from top.html
+    (top of the page i.e. navigation bar and extras, is the same for all pages, therefore no reason to copy & paste it) -->
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-10">
+            <h1>Background</h1>
+            <p>
+                Data Engineering Daily, operating since 2016, is a primarily data-oriented technology news website,
+                founded with the goal of being the leading source for Data-related news, as well as providing guides,
+                tutorials and other supplementary orientation material for aspiring & experienced Data Engineers alike.
+                <br>
+                Since the site's inception, we have been active in promoting and covering numerous Data Engineering
+                and/or Open Source related conferences - namely:&nbsp;
+                <a href="http://ieee-icde.org/">The IEEE International Conference on Data Engineering (ICDE)</a>,&nbsp;
+                <a href="https://events.linuxfoundation.org/open-source-summit-europe/">Open Source Summit</a> (formerly
+                known as LinuxCon), and&nbsp;<a href="https://www.devconf.info/">DevConf</a>, among others.
+                <br>
+                Perhaps more importantly - site readers are also encouraged to apply their knowledge and contribute to
+                Open Source Data-related projects!&nbsp;
+                <br>
+                Some well-known examples of aforementioned projects include:&nbsp;
+                <a href="https://airflow.apache.org/">Apache Airflow</a>,&nbsp;
+                <a href="https://greatexpectations.io/">Great Expectations</a> and&nbsp;
+                <a href="https://julialang.org/">the Julia Programming Language</a>).
+                <br>
+                <strong>
+                    (One could get acquainted, at his/her discretion, with such technologies & tools by exploring
+                    our Guides & Tutorials section
+                </strong>
+            </p>
+        </div>
+    </div>
+    <h1>Awards & Acclaims</h1>
+    <h1>Get in touch with us</h1>
+</div>
+<script>
+    $(function () {
+        $("#top-placeholder").load("top.html");
+    });
+</script>
 </body>
 </html>
