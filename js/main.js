@@ -1,8 +1,8 @@
 function getDateTime() {
-    if ($('#current-date').length > 0) {
+    if ($('#current-date').length) {
         $("#current-date").html(new Date().toLocaleDateString());
     }
-    if ($('#current-time').length > 0) {
+    if ($('#current-time').length) {
         $("#current-time").html(new Date().toLocaleTimeString());
     }
     setTimeout(getDateTime, 1000);

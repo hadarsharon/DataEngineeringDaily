@@ -20,10 +20,20 @@ li.hot-discussions {
     right: 1rem;
 }
 
-[data-component="newsbox"] .newsitem {
-    display: none;
+#newsbox-homepage {
+    margin: auto;
 }
 
-[data-component="newsbox"] .newsitem.active {
-    display: block;
+.newsitem {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s linear, opacity 1s ease-in-out;
+}
+
+.newsitem.active {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 1s linear, opacity 1s ease-in-out;
 }
