@@ -1,0 +1,30 @@
+.top-news-hot-discussions-box {
+    border: 2px solid grey;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+/* Replace list items' default bullet with star in Top News section */
+
+li.top-news {
+    list-style: "\2B50";
+    list-style-position: outside;
+    right: 1rem;
+}
+
+/* Replace list items' default bullet with fire in Hot Discussions section */
+
+
+li.hot-discussions {
+    list-style: "\1F525";
+    list-style-position: outside;
+    right: 1rem;
+}
+
+[data-component="newsbox"] .newsitem {
+display: none;
+}
+
+[data-component="newsbox"] .newsitem.active {
+display: block;
+}

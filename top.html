@@ -30,13 +30,9 @@
         <!-- Subscription, Time and Search -->
         <div class="col-3">
             <button>Subscribe to our daily digest!</button>
-            <div class="current-date-and-time">
+            <div id="date-and-time-div" class="current-date-and-time">
                 <span id="current-date"></span>
                 <span id="current-time"></span>
-                <script defer>
-                    document.getElementById("current-date").innerHTML = new Date().toLocaleDateString();
-                    document.getElementById("current-time").innerHTML = new Date().toLocaleTimeString();
-                </script>
             </div>
         </div>
     </div>
