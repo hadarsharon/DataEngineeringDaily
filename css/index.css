@@ -14,7 +14,6 @@ li.top-news {
 
 /* Replace list items' default bullet with fire in Hot Discussions section */
 
-
 li.hot-discussions {
     list-style: "\1F525";
     list-style-position: outside;
@@ -22,9 +21,9 @@ li.hot-discussions {
 }
 
 [data-component="newsbox"] .newsitem {
-display: none;
+    display: none;
 }
 
 [data-component="newsbox"] .newsitem.active {
-display: block;
+    display: block;
 }
