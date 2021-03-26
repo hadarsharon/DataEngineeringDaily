@@ -13,10 +13,10 @@ function alternateNewsItems() {
                 }, 6000
             );
         } else {
-            setTimeout(alternateNewsItems, 500);
+            setTimeout(alternateNewsItems, 100);
         }
     } else {
-        setTimeout(alternateNewsItems, 500);
+        setTimeout(alternateNewsItems, 100);
     }
 }
 

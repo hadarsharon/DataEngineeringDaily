@@ -31,8 +31,8 @@ li.hot-discussions {
     border-radius: 1rem;
     height: fit-content;
     width: fit-content;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     padding: 2rem;
 }
 
@@ -67,4 +67,25 @@ li.hot-discussions {
     height: 330px;
     margin-left: 2rem;
     margin-right: 3rem;
+}
+
+.video-row {
+    margin: 3rem;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid dimgrey;
+    border-radius: 2rem;
 }

@@ -10,7 +10,7 @@
     <meta name="keywords"
           content="Data, Engineering, Data Engineering, Open Source, Technology, Programming, News, Events, Updates">
     <meta name="robots" content="noindex,nofollow">
-    <title>About Us</title>
+    <title>Data Engineering Daily -> About Us</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
@@ -27,6 +27,11 @@
 <div id="top-placeholder">
     <!-- Placeholder div to be populated with HTML from top.html
     (top of the page i.e. navigation bar and extras, is the same for all pages, therefore no reason to copy & paste it) -->
+    <script>
+        $(function () {
+            $("#top-placeholder").load("templates/top.html");
+        });
+    </script>
 </div>
 
 <div class="container-fluid">
@@ -170,10 +175,5 @@
         </div>
     </div>
 </div>
-<script>
-    $(function () {
-        $("#top-placeholder").load("top.html");
-    });
-</script>
 </body>
 </html>

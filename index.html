@@ -34,7 +34,7 @@
     (top of the page i.e. navigation bar and extras, is the same for all pages, therefore no reason to copy & paste it) -->
     <script>
         $(function () {
-            $("#top-placeholder").load("top.html");
+            $("#top-placeholder").load("templates/top.html");
         });
     </script>
 </div>
@@ -105,6 +105,11 @@
                     </li>
                 </ul>
             </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 5rem;">
+        <div class="col-4 offset-4 d-flex align-items-center justify-content-center">
+            <h1>Latest News</h1>
         </div>
     </div>
     <div class="row">
@@ -188,16 +193,50 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-10 offset-1">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/IAF8DjrQSSk"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/_Rnrx2lo9cw"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+    <div class="row" style="margin-top: 5rem;">
+        <div class="col-4 offset-4 d-flex align-items-center justify-content-center">
+            <h1>Trending Videos</h1>
+        </div>
+    </div>
+    <div class="row video-row">
+        <div class="col-5 offset-1 d-flex align-items-center justify-content-center">
+            <div class="video-container">
+                <iframe class="video"
+                        src="https://www.youtube.com/embed/IAF8DjrQSSk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-5 d-flex align-items-center justify-content-center">
+            <div class="video-container">
+                <iframe class="video"
+                        src="https://www.youtube.com/embed/_Rnrx2lo9cw"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="row video-row">
+        <div class="col-5 offset-1 d-flex align-items-center justify-content-center">
+            <div class="video-container">
+                <iframe class="video"
+                        src="https://www.youtube.com/embed/YRvejW9FSJ4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-5 d-flex align-items-center justify-content-center">
+            <div class="video-container">
+                <iframe class="video"
+                        src="https://www.youtube.com/embed/gJ85ixGCe8M"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 </div>
