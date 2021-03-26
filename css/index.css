@@ -21,18 +21,25 @@ li.hot-discussions {
 }
 
 #newsbox-homepage {
-    margin: auto;
+    display: inline-block;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: fit-content;
+    width: fit-content;
 }
 
 .newsitem {
     position: absolute;
+    border: 1px solid lightslategrey;
     visibility: hidden;
     opacity: 0;
     transition: visibility 1s linear, opacity 1s ease-in-out;
 }
 
 .newsitem.active {
-    position: absolute;
+    position: relative;
+    border: 1px solid lightslategrey;
     visibility: visible;
     opacity: 1;
     transition: visibility 1s linear, opacity 1s ease-in-out;
