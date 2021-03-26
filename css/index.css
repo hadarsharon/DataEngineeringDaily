@@ -20,6 +20,10 @@ li.hot-discussions {
     right: 1rem;
 }
 
+.discussion {
+    margin-left: 1rem;
+}
+
 #newsbox-homepage {
     display: inline-block;
     position: relative;
@@ -53,14 +57,14 @@ li.hot-discussions {
 }
 
 .newsitem img {
-    border: 1px solid rgba(20, 25, 50, 0.1);
+    border: 1px solid rgba(20, 25, 50, 0.2);
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .vr {
-    border-left: 0.5rem solid rgba(20, 25, 50, 0.3);
+    border-left: 0.3rem solid rgba(20, 25, 50, 0.3);
     border-radius: 100rem;
     height: 330px;
     margin-left: 2rem;
-    margin-right: 2rem;
+    margin-right: 3rem;
 }
