@@ -33,6 +33,7 @@ li.hot-discussions {
 .newsitem {
     position: absolute;
     visibility: hidden;
+    vertical-align: middle;
     opacity: 0;
     transition: visibility 1s linear, opacity 1s ease-in-out;
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.4);
@@ -41,6 +42,7 @@ li.hot-discussions {
 .newsitem.active {
     position: relative;
     visibility: visible;
+    vertical-align: middle;
     opacity: 1;
     transition: visibility 1s linear, opacity 1s ease-in-out;
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.4);
