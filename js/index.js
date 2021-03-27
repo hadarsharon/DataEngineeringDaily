@@ -6,16 +6,16 @@ function alternateSlideItems(slideBoxes) {
         counters.push(0);
     }
     slideBoxChildren.forEach(function (children, i) {
-        children.forEach(function (child) {
-            child.classList.remove('.active');
+        Array.from(children).forEach(function (child) {
+            child.classList.remove('active');
         });
         children[counters[i]].classList.add('active');
     })
     setInterval(
         () => {
             slideBoxChildren.forEach(function (children, i) {
-                children.forEach(function (child) {
-                    child.classList.remove('.active');
+                Array.from(children).forEach(function (child) {
+                    child.classList.remove('active');
                 });
                 counters[i] = counters[i] === (children.length - 1) ? 0 : counters[i] + 1
                 children[counters[i]].classList.add('active');
@@ -37,7 +37,7 @@ function scrollSlide(section, direction) {
         return;
     }
     toDeactivate = slides.find('.active');
-    toDeactivate.forEach(function (element) {
+    Array.from(toDeactivate).forEach(function (element) {
         element.classList.remove('active')
     });
 
