@@ -1,25 +1,65 @@
-function alternateNewsItems() {
-    let newsBox = $("#newsbox-homepage");
-    if (newsBox.length) {
-        let newsItems = newsBox.children()
-        if (newsItems.length) {
-            let i = 0;
-            newsItems[i].classList.add('active');
-            setInterval(
-                () => {
-                    newsItems[i].classList.remove('active');
-                    i = i === (newsItems.length - 1) ? 0 : i + 1
-                    newsItems[i].classList.add('active');
-                }, 6000
-            );
-        } else {
-            setTimeout(alternateNewsItems, 100);
-        }
-    } else {
-        setTimeout(alternateNewsItems, 100);
+function alternateSlideItems(slideBoxes) {
+    let slideBoxChildren = [];
+    let counters = []
+    for (const slideBox of slideBoxes) {
+        slideBoxChildren.push(slideBox.children);
+        counters.push(0);
+    }
+    slideBoxChildren.forEach(function (children, i) {
+        children.forEach(function (child) {
+            child.classList.remove('.active');
+        });
+        children[counters[i]].classList.add('active');
+    })
+    setInterval(
+        () => {
+            slideBoxChildren.forEach(function (children, i) {
+                children.forEach(function (child) {
+                    child.classList.remove('.active');
+                });
+                counters[i] = counters[i] === (children.length - 1) ? 0 : counters[i] + 1
+                children[counters[i]].classList.add('active');
+            })
+        }, 6000
+    );
+}
+
+function scrollSlide(section, direction) {
+    let slides;
+    let toActivate;
+    let toDeactivate;
+    if (section.toLowerCase() === 'news') {
+        slides = $('#slidebox-news');
+    } else if (section.toLowerCase() === 'events') {
+        slides = $('#slidebox-events');
+    }
+    if (!slides) {
+        return;
+    }
+    toDeactivate = slides.find('.active');
+    toDeactivate.forEach(function (element) {
+        element.classList.remove('active')
+    });
+
+    switch (direction.toLowerCase()) {
+        case 'right':
+            toActivate = toDeactivate.index() < (slides.children().length - 1) ? (toDeactivate.index() + 1) : 0;
+            slides.children()[toActivate].classList.add('active');
+            break;
+        case 'left':
+            toActivate = toDeactivate.index() > 0 ? (toDeactivate.index() - 1) : (slides.children().length - 1);
+            slides.children()[toActivate].classList.add('active');
+            break;
+        default:
+            toDeactivate[0].classList.add('active');
     }
 }
 
 $(window).on('load', function () {
-    alternateNewsItems();
+    let slideBoxes;
+    do {
+        slideBoxes = $(".slidebox-homepage");
+    }
+    while (slideBoxes.length < 2)
+    alternateSlideItems(slideBoxes);
 });

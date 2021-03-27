@@ -77,3 +77,24 @@ footer {
     background-color: rgba(63, 191, 191, 0.3);
     border-bottom: 2px outset cadetblue;
 }
+
+.video-row {
+    margin: 3rem;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid dimgrey;
+    border-radius: 2rem;
+}

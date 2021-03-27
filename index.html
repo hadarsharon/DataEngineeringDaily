@@ -117,8 +117,8 @@
     </div>
     <div class="row">
         <div class="col-10 offset-1">
-            <div id="newsbox-homepage">
-                <div class="newsitem">
+            <div id="slidebox-news" class="slidebox-homepage slidebox-news">
+                <div class="slideitem slideitem-news">
                     <div class="col d-flex align-items-center justify-content-center">
                         <div>
                             <h1 style="text-align: center; margin-bottom: 1rem;">Apache Airflow <b>2.0</b> is finally
@@ -137,7 +137,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="newsitem">
+                <div class="slideitem slideitem-news">
                     <div class="col d-flex align-items-center justify-content-center">
                         <div>
                             <h1 style="text-align: center; margin-bottom: 2rem;">Julia has a new <b><i>Pkg</i></b>
@@ -156,7 +156,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="newsitem">
+                <div class="slideitem slideitem-news">
                     <div class="col d-flex align-items-center justify-content-center">
                         <div>
                             <h1 style="text-align: center; margin-bottom: 1rem;">The state of Hadoop going into
@@ -174,7 +174,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="newsitem">
+                <div class="slideitem slideitem-news">
                     <div class="col d-flex align-items-center justify-content-center">
                         <div>
                             <h1 style="text-align: center; margin-bottom: 1rem;">A Sneak Peek into Apache Spark
@@ -245,6 +245,57 @@
             </div>
         </div>
     </div>
+    <div class="row" style="margin-top: 5rem;">
+        <div class="col-4 offset-4 d-flex align-items-center justify-content-center">
+            <h1>Upcoming Events</h1>
+        </div>
+    </div>
+    <div class="col-10 offset-1">
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col d-flex align-items-center justify-content-center">
+            <button id="events-arrow-left" class="arrow-button" style="margin-right: 2rem;"
+                    onclick="scrollSlide('events', 'left')">
+                &#8249;
+            </button>
+            <div id="slidebox-events" class="slidebox-homepage">
+                <div class="slideitem">
+                    <div class="col d-flex align-items-center justify-content-center">
+                        <a href="https://fosdem.org/2021/">
+                            <img class="slideitem-events" src="img/events/FOSDEM.png" height="450px" width="800px">
+                        </a>
+                    </div>
+                </div>
+                <div class="slideitem">
+                    <div class="col d-flex align-items-center justify-content-center">
+                        <a href="https://icde2021.gr/">
+                            <img class="slideitem-events" src="img/events/ICDE.png" height="450px" width="800px">
+                        </a>
+                    </div>
+                </div>
+                <div class="slideitem">
+                    <div class="col d-flex align-items-center justify-content-center">
+                        <a href="https://juliacon.org/2021/">
+                            <img class="slideitem-events" src="img/events/JuliaCon.png" height="450px" width="800px">
+                        </a>
+                    </div>
+                </div>
+                <div class="slideitem">
+                    <div class="col d-flex align-items-center justify-content-center">
+                        <a href="https://events.linuxfoundation.org/open-source-summit-europe/">
+                            <img class="slideitem-events" src="img/events/OSS.JPG" height="450px" width="800px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button id="events-arrow-right" class="arrow-button" style="margin-left: 2rem;"
+                    onclick="scrollSlide('events' ,'right')">
+                &#8250;
+            </button>
+        </div>
+    </div>
+</div>
 </div>
 <footer>
     <p>Footer</p>
