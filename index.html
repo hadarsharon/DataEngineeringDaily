@@ -31,14 +31,62 @@
 
 <div id="top-placeholder">
     <!-- Placeholder div to be populated with HTML from top.html
-    (top of the page i.e. navigation bar and extras, is the same for all pages, therefore no reason to copy & paste it) -->
+    (top of the page i.e. navigation bar and extras, is the same for all pages, therefore no reason to copy & paste it)
     <script>
         $(function () {
             $("#top-placeholder").load("templates/top.html");
         });
     </script>
-</div>
+    -->
+    <!-- TOP SECTION OF THE PAGE - LOGO, TITLE, NAVIGATION BAR, SUBSCRIPTION... -->
+    <div id="top" class="container-fluid no-padding">
+        <div class="row top-section">
+            <!-- Data Engineering Daily Logo Box -->
+            <div class="col-3 d-flex align-items-center justify-content-center">
+                <a href="index.html">
+                    <img id="data-engineering-daily-logo" src="img/logo.png"
+                         alt="The Data Engineering Daily Website Logo">
+                </a>
+            </div>
+            <!-- Navigation Bar -->
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="row">
+                        <div class="col nav-button-div">
+                            <a class="nav-link nav-button" href="about.html"><span>About </span></a>
+                        </div>
+                        <div class="col nav-button-div">
+                            <a class="nav-link nav-button" href="news.html"><span>News </span></a>
+                        </div>
+                        <div class="col nav-button-div">
+                            <a class="nav-link nav-button" href="events.html"><span>Events </span></a>
+                        </div>
+                        <div class="col nav-button-div">
+                            <a class="nav-link nav-button" href="guides.html"><span>Guides & Tutorials </span></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- Subscription, Time and Search -->
+            <div class="col-3">
+                <div class="row">
+                    <div class="col d-flex align-items-center justify-content-center">
+                        <button>Subscribe to our daily digest!</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex align-items-center justify-content-center">
 
+                        <div id="date-and-time-div" class="current-date-and-time">
+                            <span id="current-date"></span>
+                            <span id="current-time"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container-fluid no-padding">
     <div class="row">
         <div class="col-12 rss-feed-box">
@@ -84,21 +132,21 @@
                 <ul>
                     <li class="hot-discussions">
                         <span class="discussion">
-                            <a>
+                            <a href="#">
                                 <b>[Apache Spark]</b> - When to use RDDs vs. DataFrames vs. DataSets
                             </a>
                         </span>
                     </li>
                     <li class="hot-discussions">
                         <span class="discussion">
-                            <a>
+                            <a href="#">
                                 <b>[Python]</b> - What are the advantages of asyncio over multiprocessing/multithreading?
                             </a>
                         </span>
                     </li>
                     <li class="hot-discussions">
                         <span class="discussion">
-                            <a>
+                            <a href="#">
                                 <b>[Databases - PostgreSQL]</b> - stored procedure vs. external ORM - which is the better choice?
                             </a>
                         </span>
@@ -116,20 +164,25 @@
         <hr>
     </div>
     <div class="row">
-        <div class="col-10 offset-1">
+        <div class="col-10 offset-1 d-flex align-items-center justify-content-center">
+            <button id="news-arrow-left" class="arrow-button" style="margin-right: 2rem;"
+                    onclick="scrollSlide('news' ,'left')">
+                &#8249;
+            </button>
             <div id="slidebox-news" class="slidebox-homepage slidebox-news">
                 <div class="slideitem slideitem-news">
                     <div class="col d-flex align-items-center justify-content-center">
                         <div>
-                            <h1 style="text-align: center; margin-bottom: 1rem;">Apache Airflow <b>2.0</b> is finally
+                            <h1 style="text-align: center; margin-bottom: 1rem;">Apache Airflow <b>2.0</b> is
+                                finally
                                 here!
                             </h1>
-                            <h3 style="text-align: center; margin-top: 1rem;">New Operators, a fresh UI,
+                            <h4 style="text-align: center; margin-top: 1rem;">New Operators, a fresh UI,
                                 <wbr>
                                 better integrations
                                 <wbr>
                                 and many more exciting features introduced...
-                            </h3>
+                            </h4>
                         </div>
                         <div class="vr"></div>
                         <div>
@@ -143,12 +196,13 @@
                             <h1 style="text-align: center; margin-bottom: 2rem;">Julia has a new <b><i>Pkg</i></b>
                                 Manager
                             </h1>
-                            <h3 style="text-align: center; margin-top: 2rem;">Meet <b>Pkg</b> - a complete rewrite of
+                            <h4 style="text-align: center; margin-top: 2rem;">Meet <b>Pkg</b> - a complete rewrite
+                                of
                                 <wbr>
                                 Julia's old package manager,
                                 <wbr>
                                 released together with Julia v1.0
-                            </h3>
+                            </h4>
                         </div>
                         <div class="vr"></div>
                         <div>
@@ -161,12 +215,12 @@
                         <div>
                             <h1 style="text-align: center; margin-bottom: 1rem;">The state of Hadoop going into
                                 2021</h1>
-                            <h3 style="text-align: center; margin-top: 1rem;">With MapReduce all but diminished,
+                            <h4 style="text-align: center; margin-top: 1rem;">With MapReduce all but diminished,
                                 <wbr>
                                 is the curtain closing on Hadoop's
                                 <wbr>
                                 relevance in the Big Data world?
-                            </h3>
+                            </h4>
                         </div>
                         <div class="vr"></div>
                         <div>
@@ -180,12 +234,12 @@
                             <h1 style="text-align: center; margin-bottom: 1rem;">A Sneak Peek into Apache Spark
                                 <b>3.0</b>
                             </h1>
-                            <h3 style="text-align: center; margin-top: 1rem;">After months of anticipation:
+                            <h4 style="text-align: center; margin-top: 1rem;">After months of anticipation:
                                 <wbr>
                                 Did Spark finally make the jump
                                 <wbr>
                                 from <i>Great</i> to <b><i>Perfect</i></b>?
-                            </h3>
+                            </h4>
                         </div>
                         <div class="vr"></div>
                         <div>
@@ -194,6 +248,10 @@
                     </div>
                 </div>
             </div>
+            <button id="news-arrow-right" class="arrow-button" style="margin-left: 2rem;"
+                    onclick="scrollSlide('news' ,'right')">
+                &#8250;
+            </button>
         </div>
     </div>
     <div class="row" style="margin-top: 5rem;">
@@ -277,7 +335,8 @@
                 <div class="slideitem">
                     <div class="col d-flex align-items-center justify-content-center">
                         <a href="https://juliacon.org/2021/">
-                            <img class="slideitem-events" src="img/events/JuliaCon.png" height="450px" width="800px">
+                            <img class="slideitem-events" src="img/events/JuliaCon.png" height="450px"
+                                 width="800px">
                         </a>
                     </div>
                 </div>

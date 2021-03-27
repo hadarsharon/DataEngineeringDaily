@@ -26,12 +26,51 @@
 <body>
 <div id="top-placeholder">
     <!-- Placeholder div to be populated with HTML from top.html
-    (top of the page i.e. navigation bar and extras, is the same for all pages, therefore no reason to copy & paste it) -->
+    (top of the page i.e. navigation bar and extras, is the same for all pages, therefore no reason to copy & paste it)
     <script>
         $(function () {
             $("#top-placeholder").load("templates/top.html");
         });
     </script>
+    -->
+    <div id="top" class="container-fluid no-padding">
+        <div class="row top-section">
+            <!-- Data Engineering Daily Logo Box -->
+            <div class="col-3">
+                <a href="index.html">
+                    <img id="data-engineering-daily-logo" src="img/logo.png"
+                         alt="The Data Engineering Daily Website Logo">
+                </a>
+            </div>
+            <!-- Navigation Bar -->
+            <div class="col-6">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="row">
+                        <div class="col nav-button-div">
+                            <a class="nav-link nav-button" href="about.html"><span>About </span></a>
+                        </div>
+                        <div class="col nav-button-div">
+                            <a class="nav-link nav-button" href="news.html"><span>News </span></a>
+                        </div>
+                        <div class="col nav-button-div">
+                            <a class="nav-link nav-button" href="events.html"><span>Events </span></a>
+                        </div>
+                        <div class="col nav-button-div">
+                            <a class="nav-link nav-button" href="guides.html"><span>Guides & Tutorials </span></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- Subscription, Time and Search -->
+            <div class="col-3">
+                <button>Subscribe to our daily digest!</button>
+                <div id="date-and-time-div" class="current-date-and-time">
+                    <span id="current-date"></span>
+                    <span id="current-time"></span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="container-fluid">
