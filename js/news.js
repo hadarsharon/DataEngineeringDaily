@@ -5,17 +5,17 @@ let templateObjectsNews = [
             "newsButtons": [
                 {
                     "button-id": "apache-airflow-news-button",
-                    "target-modal": "#apache-airflow-modal",
+                    "target-modal": "apache-airflow-modal",
                     "button-text": "Apache Airflow <b>2.0</b> is finally here!"
                 },
                 {
                     "button-id": "julia-pkg-news-button",
-                    "target-modal": "#julia-pkg-modal",
+                    "target-modal": "julia-pkg-modal",
                     "button-text": "Julia has a new <b><i>Pkg</i></b> Manager"
                 },
                 {
                     "button-id": "apache-spark-news-button",
-                    "target-modal": "#apache-spark-modal",
+                    "target-modal": "apache-spark-modal",
                     "button-text": "A Sneak Peek into Apache Spark <b>3.0</b>"
                 },
             ]
@@ -145,6 +145,24 @@ let templateObjectsNews = [
                             <iframe class="video"
                                     src="https://www.youtube.com/embed/76KL8aSz0Sg"
                                     title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        `
+                },
+                {
+                    "modal-id": "apache-spark-modal",
+                    "modal-title": "A Sneak Peek into Apache Spark <b>3.0</b>",
+                    "modal-content":
+                        `
+                        <article>
+
+                        </article>
+                        <div class="video-container">
+                            <iframe class="video"
+                                    src="https://www.youtube.com/embed/g-qZslQsOuE" title="YouTube video player"
+                                    frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen>
                             </iframe>
