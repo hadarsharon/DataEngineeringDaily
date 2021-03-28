@@ -167,7 +167,7 @@
     <div class="col-10 offset-1">
         <hr>
     </div>
-    <div id="videos">
+    <section id="videos">
         <script id="videos-handlebars-template" type="text/x-handlebars-template">
             {{#each videosRows}}
             <div class="row video-row">
@@ -186,55 +186,7 @@
             </div>
             {{/each}}
         </script>
-    </div>
-
-    <!--
-    <div class="row video-row">
-        <div class="col-5 offset-1 d-flex align-items-center justify-content-center">
-            <div class="video-container">
-                <iframe class="video"
-                        src="https://www.youtube.com/embed/IAF8DjrQSSk"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-        <div class="col-5 d-flex align-items-center justify-content-center">
-            <div class="video-container">
-                <iframe class="video"
-                        src="https://www.youtube.com/embed/_Rnrx2lo9cw"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-    </div>
-    <div class="row video-row">
-        <div class="col-5 offset-1 d-flex align-items-center justify-content-center">
-            <div class="video-container">
-                <iframe class="video"
-                        src="https://www.youtube.com/embed/YRvejW9FSJ4"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-        <div class="col-5 d-flex align-items-center justify-content-center">
-            <div class="video-container">
-                <iframe class="video"
-                        src="https://www.youtube.com/embed/gJ85ixGCe8M"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-    </div>
-        -->
+    </section>
     <div class="row" style="margin-top: 5rem;">
         <div class="col-4 offset-4 d-flex align-items-center justify-content-center">
             <h1>Upcoming Events</h1>
@@ -250,35 +202,17 @@
                 &#8249;
             </button>
             <div id="slidebox-events" class="slidebox-homepage">
-                <div class="slideitem">
-                    <div class="col d-flex align-items-center justify-content-center">
-                        <a href="https://fosdem.org/2021/">
-                            <img class="slideitem-events" src="img/events/FOSDEM.png" height="450px" width="800px">
-                        </a>
+                <script id="slidebox-events-handlebars-template" type="text/x-handlebars-template">
+                    {{#each events}}
+                    <div class="slideitem">
+                        <div class="col d-flex align-items-center justify-content-center">
+                            <a href="{{event-link}}">
+                                <img class="slideitem-events" src="img/events/{{image}}" height="450px" width="800px">
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="slideitem">
-                    <div class="col d-flex align-items-center justify-content-center">
-                        <a href="https://icde2021.gr/">
-                            <img class="slideitem-events" src="img/events/ICDE.png" height="450px" width="800px">
-                        </a>
-                    </div>
-                </div>
-                <div class="slideitem">
-                    <div class="col d-flex align-items-center justify-content-center">
-                        <a href="https://juliacon.org/2021/">
-                            <img class="slideitem-events" src="img/events/JuliaCon.png" height="450px"
-                                 width="800px">
-                        </a>
-                    </div>
-                </div>
-                <div class="slideitem">
-                    <div class="col d-flex align-items-center justify-content-center">
-                        <a href="https://events.linuxfoundation.org/open-source-summit-europe/">
-                            <img class="slideitem-events" src="img/events/OSS.JPG" height="450px" width="800px">
-                        </a>
-                    </div>
-                </div>
+                    {{/each}}
+                </script>
             </div>
             <button id="events-arrow-right" class="arrow-button" style="margin-left: 2rem;"
                     onclick="scrollSlide('events' ,'right')">
@@ -292,8 +226,8 @@
 </footer>
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
 <script src="js/index.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>

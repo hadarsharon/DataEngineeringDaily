@@ -142,6 +142,30 @@ let templateObjects = [
         },
         target: '#videos'
     },
+    {
+        template: '#slidebox-events-handlebars-template',
+        context: {
+            "events": [
+                {
+                    "event-link": "https://fosdem.org/2021/",
+                    "image": "FOSDEM.png"
+                },
+                {
+                    "event-link": "https://icde2021.gr/",
+                    "image": "ICDE.png"
+                },
+                {
+                    "event-link": "https://juliacon.org/2021/",
+                    "image": "JuliaCon.png"
+                },
+                {
+                    "event-link": "https://events.linuxfoundation.org/open-source-summit-europe/",
+                    "image": "OSS.JPG"
+                },
+            ]
+        },
+        target: '#slidebox-events'
+    }
 ];
 
 let template;
