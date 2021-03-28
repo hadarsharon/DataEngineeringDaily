@@ -45,7 +45,7 @@
                     <script id="navbar-buttons-handlebars-template" type="text/x-handlebars-template">
                         {{#each buttons}}
                         <div class="col nav-button-div">
-                            <a class="nav-link nav-button" href="about.html"><span>{{this}} </span></a>
+                            <a class="nav-link nav-button" href="{{button-link}}"><span>{{text}} </span></a>
                         </div>
                         {{/each}}
                     </script>
@@ -226,8 +226,8 @@
 </footer>
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
-<script src="js/index.js"></script>
 <script src="js/main.js"></script>
+<script src="js/index.js"></script>
 </body>
 
 </html>

@@ -2,11 +2,11 @@ function alternateSlideItems(slideBoxes) {
     let slideBoxChildren = [];
     let counters = []
     for (const slideBox of slideBoxes) {
-        slideBoxChildren.push(slideBox.children);
+        slideBoxChildren.push(Array.from(slideBox.children).filter(element => element.nodeName.toLowerCase() !== "script"));
         counters.push(0);
     }
     slideBoxChildren.forEach(function (children, i) {
-        Array.from(children).forEach(function (child) {
+        children.forEach(function (child) {
             child.classList.remove('active');
         });
         children[counters[i]].classList.add('active');
@@ -14,7 +14,7 @@ function alternateSlideItems(slideBoxes) {
     setInterval(
         () => {
             slideBoxChildren.forEach(function (children, i) {
-                Array.from(children).forEach(function (child) {
+                children.forEach(function (child) {
                     child.classList.remove('active');
                 });
                 counters[i] = counters[i] === (children.length - 1) ? 0 : counters[i] + 1
@@ -55,19 +55,7 @@ function scrollSlide(section, direction) {
     }
 }
 
-let templateObjects = [
-    {
-        template: '#navbar-buttons-handlebars-template',
-        context: {
-            "buttons": [
-                "About",
-                "News",
-                "Guides & Tutorials",
-                "Quizzes"
-            ]
-        },
-        target: '#navbar-buttons'
-    },
+let templateObjectsIndex = [
     {
         template: '#top-news-handlebars-template',
         context: {
@@ -168,17 +156,17 @@ let templateObjects = [
     }
 ];
 
-let template;
-let templateScript;
-let context;
-let html;
+let templateIndex;
+let templateScriptIndex;
+let contextIndex;
+let htmlIndex;
 
-for (const templateObject of templateObjects) {
-    template = $(templateObject.template).html();
-    templateScript = Handlebars.compile(template);
-    context = templateObject.context
-    html = templateScript(context);
-    $(templateObject.target).append(html);
+for (const templateObject of templateObjectsIndex) {
+    templateIndex = $(templateObject.template).html();
+    templateScriptIndex = Handlebars.compile(templateIndex);
+    contextIndex = templateObject.context
+    htmlIndex = templateScriptIndex(contextIndex);
+    $(templateObject.target).append(htmlIndex);
 }
 
 let slideBoxes;
