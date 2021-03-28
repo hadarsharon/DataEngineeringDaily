@@ -79,6 +79,69 @@ let templateObjects = [
         },
         target: '#top-news-list'
     },
+    {
+        template: '#top-discussions-handlebars-template',
+        context: {
+            "discussions": [
+                "<b>[Apache Spark]</b> - When to use RDDs vs. DataFrames vs. DataSets",
+                "<b>[Python]</b> - What are the advantages of asyncio over multiprocessing/multithreading?",
+                "<b>[Databases - PostgreSQL]</b> - stored procedure vs. external ORM - which is the better choice?",
+            ]
+        },
+        target: '#top-discussions-list'
+    },
+    {
+        template: '#slidebox-news-handlebars-template',
+        context: {
+            "news": [
+                {
+                    "header": "Apache Airflow <b>2.0</b> is finally here!",
+                    "text": "New Operators, a fresh UI, better integrations and many more exciting features introduced...",
+                    "news-link": "apache-airflow-news-button",
+                    "image": "airflow-2.jpg"
+                },
+                {
+                    "header": "Julia has a new <b><i>Pkg</i></b> Manager",
+                    "text": "Meet <b>Pkg</b> - a complete rewrite of Julia's old package manager, released together with Julia v1.0",
+                    "news-link": "julia-pkg-news-button",
+                    "image": "julia-pkg-manager-news.png"
+                },
+                {
+                    "header": "The state of Hadoop going into 2021",
+                    "text": "With MapReduce all but diminished, is the curtain closing on Hadoop's relevance in the Big Data world?",
+                    "news-link": "",
+                    "image": "hadoop-curtain-news.jpg"
+                },
+                {
+                    "header": "A Sneak Peek into Apache Spark <b>3.0</b>",
+                    "text": "After months of anticipation: Did Spark finally make the jump from <i>Great</i> to <b><i>Perfect</i></b>?",
+                    "news-link": "",
+                    "image": "apache-spark-3.png"
+                },
+            ]
+        },
+        target: '#slidebox-news'
+    },
+    {
+        template: '#videos-handlebars-template',
+        context: {
+            "videosRows": [
+                {
+                    "videos": [
+                        "https://www.youtube.com/embed/IAF8DjrQSSk",
+                        "https://www.youtube.com/embed/_Rnrx2lo9cw"
+                    ]
+                },
+                {
+                    "videos": [
+                        "https://www.youtube.com/embed/YRvejW9FSJ4",
+                        "https://www.youtube.com/embed/gJ85ixGCe8M"
+                    ]
+                }
+            ]
+        },
+        target: '#videos'
+    },
 ];
 
 let template;
