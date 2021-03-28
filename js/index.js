@@ -55,7 +55,20 @@ function scrollSlide(section, direction) {
     }
 }
 
+let newsFeed = [
+    "test1",
+    "test2",
+    "test3"
+];
+
 let templateObjectsIndex = [
+    {
+        template: '#rss-feed-handlebars-template',
+        context: {
+            "newsFeed": newsFeed.join('  |  ')
+        },
+        target: '#rss-feed-content'
+    },
     {
         template: '#top-news-handlebars-template',
         context: {
