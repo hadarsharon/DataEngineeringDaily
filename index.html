@@ -39,7 +39,7 @@
     </script>
     -->
     <!-- TOP SECTION OF THE PAGE - LOGO, TITLE, NAVIGATION BAR, SUBSCRIPTION... -->
-    <div id="top" class="container-fluid no-padding">
+    <div id="top" class="container-fluid no-padding" style="background-image: url('img/background-cropped.jpg');">
         <div class="row top-section">
             <!-- Data Engineering Daily Logo Box -->
             <div class="col-3 d-flex align-items-center justify-content-center">
@@ -68,20 +68,11 @@
                 </nav>
             </div>
             <!-- Subscription, Time and Search -->
-            <div class="col-3">
-                <div class="row">
-                    <div class="col d-flex align-items-center justify-content-center">
-                        <button>Subscribe to our daily digest!</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col d-flex align-items-center justify-content-center">
-
-                        <div id="date-and-time-div" class="current-date-and-time">
-                            <span id="current-date"></span>
-                            <span id="current-time"></span>
-                        </div>
-                    </div>
+            <div class="col-3 d-flex align-items-center justify-content-center">
+                <button>Subscribe to our daily digest!</button>
+                <div id="date-and-time-div" class="current-date-and-time">
+                    <span id="current-date"></span>
+                    <span id="current-time"></span>
                 </div>
             </div>
         </div>
@@ -107,20 +98,29 @@
             </header>
         </div>
     </div>
-    <div class="row">
+    <section class="row">
         <div class="col-5 offset-1">
             <div class="top-news-hot-discussions-box">
                 <h5 style="text-align: center;">&#128240;&nbsp;Top News</h5>
                 <hr>
                 <ul>
                     <li class="top-news">
-                        <span>One</span>
+                        <span class="bullet-data">
+                            <a href="#">Python 3.9 rolls out, new features revealed, summary & references inside!</a>
+                        </span>
                     </li>
                     <li class="top-news">
-                        <span>Two</span>
+                        <span class="bullet-data">
+                            <a href="#">NumPy 1.20 Released with Runtime SIMD Support and Type Annotations</a>
+                        </span>
                     </li>
                     <li class="top-news">
-                        <span>Three</span>
+                        <span class="bullet-data">
+                            <a href="#">
+                                <b>[Blog]</b> - How I built a robust, fully-automated data pipeline testing infrastructure using
+                                Airflow and Great Expectations
+                            </a>
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -131,21 +131,21 @@
                 <hr>
                 <ul>
                     <li class="hot-discussions">
-                        <span class="discussion">
+                        <span class="bullet-data">
                             <a href="#">
                                 <b>[Apache Spark]</b> - When to use RDDs vs. DataFrames vs. DataSets
                             </a>
                         </span>
                     </li>
                     <li class="hot-discussions">
-                        <span class="discussion">
+                        <span class="bullet-data">
                             <a href="#">
                                 <b>[Python]</b> - What are the advantages of asyncio over multiprocessing/multithreading?
                             </a>
                         </span>
                     </li>
                     <li class="hot-discussions">
-                        <span class="discussion">
+                        <span class="bullet-data">
                             <a href="#">
                                 <b>[Databases - PostgreSQL]</b> - stored procedure vs. external ORM - which is the better choice?
                             </a>
@@ -154,7 +154,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
     <div class="row" style="margin-top: 5rem;">
         <div class="col-4 offset-4 d-flex align-items-center justify-content-center">
             <h1>Latest News</h1>
@@ -163,7 +163,7 @@
     <div class="col-10 offset-1">
         <hr>
     </div>
-    <div class="row">
+    <section class="row">
         <div class="col-10 offset-1 d-flex align-items-center justify-content-center">
             <button id="news-arrow-left" class="arrow-button" style="margin-right: 2rem;"
                     onclick="scrollSlide('news' ,'left')">
@@ -253,7 +253,7 @@
                 &#8250;
             </button>
         </div>
-    </div>
+    </section>
     <div class="row" style="margin-top: 5rem;">
         <div class="col-4 offset-4 d-flex align-items-center justify-content-center">
             <h1>Trending Videos</h1>
@@ -269,7 +269,8 @@
                         src="https://www.youtube.com/embed/IAF8DjrQSSk"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                        allowfullscreen>
+                </iframe>
             </div>
         </div>
         <div class="col-5 d-flex align-items-center justify-content-center">
@@ -278,7 +279,8 @@
                         src="https://www.youtube.com/embed/_Rnrx2lo9cw"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                        allowfullscreen>
+                </iframe>
             </div>
         </div>
     </div>
@@ -289,7 +291,8 @@
                         src="https://www.youtube.com/embed/YRvejW9FSJ4"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                        allowfullscreen>
+                </iframe>
             </div>
         </div>
         <div class="col-5 d-flex align-items-center justify-content-center">
@@ -299,7 +302,8 @@
                         title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                        allowfullscreen>
+                </iframe>
             </div>
         </div>
     </div>
@@ -311,7 +315,7 @@
     <div class="col-10 offset-1">
         <hr>
     </div>
-    <div class="row">
+    <section class="row">
         <div class="col d-flex align-items-center justify-content-center">
             <button id="events-arrow-left" class="arrow-button" style="margin-right: 2rem;"
                     onclick="scrollSlide('events', 'left')">
@@ -353,7 +357,7 @@
                 &#8250;
             </button>
         </div>
-    </div>
+    </section>
 </div>
 </div>
 <footer>

@@ -8,6 +8,10 @@ footer {
     text-align: center;
 }
 
+#top {
+    background-size: 100% 100%;
+}
+
 .top-section {
     background-color: rgba(38, 76, 114, 0.15);
     border-bottom: 2px outset cadetblue;
