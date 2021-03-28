@@ -130,7 +130,7 @@
                         {{#each news}}
                         <li class="top-news">
                         <span class="bullet-data">
-                            <a href="#" onClick="{{news-onclick}}">{{{news-text}}}</a>
+                            <a href="{{news-link}}" onClick="{{news-onclick}}">{{{news-text}}}</a>
                         </span>
                         </li>
                         {{/each}}
@@ -276,7 +276,6 @@
             </span>
         </div>
     </div>
-
 </footer>
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>

@@ -76,8 +76,14 @@ let templateObjectsIndex = [
         template: '#top-news-handlebars-template',
         context: {
             "news": [
-                {"news-text": "Python 3.9 rolls out, new features revealed, summary & references inside!"},
-                {"news-text": "NumPy 1.20 Released with Runtime SIMD Support and Type Annotations"},
+                {
+                    "news-text": "Python 3.9 rolls out, new features revealed, summary & references inside!",
+                    "news-link": "news.html#python-button"
+                },
+                {
+                    "news-text": "NumPy 1.20 Released with Runtime SIMD Support and Type Annotations",
+                    "news-link": "news.html#numpy-button"
+                },
                 {
                     "news-text": "<b>[Blog]</b> - How I built a robust, fully-automated data pipeline testing " +
                         "infrastructure using Airflow and Great Expectations",
@@ -117,7 +123,7 @@ let templateObjectsIndex = [
                 {
                     "header": "The state of Hadoop going into 2021",
                     "text": "With MapReduce all but diminished, is the curtain closing on Hadoop's relevance in the Big Data world?",
-                    "news-link": "",
+                    "news-link": "hadoop-button",
                     "image": "hadoop-curtain-news.jpg"
                 },
                 {
