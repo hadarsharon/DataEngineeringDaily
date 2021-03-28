@@ -1,0 +1,28 @@
+.quiz {
+    margin: 2.5rem;
+}
+
+.quiz-question {
+    margin: 1.5rem 0.5rem 1.5rem 0.5rem;
+    text-decoration: underline;
+}
+
+.floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes floating {
+    from {
+        transform: translate(0, 0px);
+    }
+    65% {
+        transform: translate(0, 1rem);
+    }
+    to {
+        transform: translate(0, -0px);
+    }
+}
