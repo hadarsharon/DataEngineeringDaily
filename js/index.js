@@ -56,16 +56,19 @@ function scrollSlide(section, direction) {
 }
 
 let newsFeed = [
-    "test1",
-    "test2",
-    "test3"
+    "PyTorch 1.8 Released; Release Includes Distributed Training Updates and AMD ROCm Support",
+    "Google Open-Sources AutoML Algorithm Model Search",
+    "Facebook Open-Sources AI Model to Predict COVID-19 Patient Outcomes",
+    "OpenAI Announces GPT-3 Model for Image Generation",
+    "TensorFlow 2.4 Release Includes CUDA 11 Support and API Updates",
+    "CNCF Approves Kubernetes Edge Computing Platform KubeEdge as Incubating Project"
 ];
 
 let templateObjectsIndex = [
     {
         template: '#rss-feed-handlebars-template',
         context: {
-            "newsFeed": newsFeed.join('  |  ')
+            "newsFeed": newsFeed.join('&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;')
         },
         target: '#rss-feed-content'
     },
