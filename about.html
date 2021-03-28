@@ -60,6 +60,41 @@
             </div>
         </div>
     </div>
+    <div class="login">
+        <div id="login" class="modal">
+            <form class="modal-content animate">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('login').style.display='none'" class="close"
+                          title="Close Modal">&times;</span>
+                </div>
+                <div class="container">
+                    <h2 style="margin-top: 1rem; margin-bottom: 2rem;">
+                        Only site members can access Blog & Forum content!
+                    </h2>
+                    <h5 style="margin-top: 1rem; margin-bottom: 2rem;">
+                        For registration details, please email us at
+                        <a href="mailto:contact@data-eng-daily.com">contact@data-eng-daily.com</a> or use the
+                        <a href="about.html#contact-form">Contact Form in our About page.</a>
+                    </h5>
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" id="uname" name="uname" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('login').style.display='none'"
+                            class="cancelbtn">
+                        Cancel
+                    </button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
 </section>
 
 <div class="container-fluid">

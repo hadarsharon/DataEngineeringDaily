@@ -62,6 +62,41 @@
             </div>
         </div>
     </div>
+    <div class="login">
+        <div id="login" class="modal">
+            <form class="modal-content animate">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('login').style.display='none'" class="close"
+                          title="Close Modal">&times;</span>
+                </div>
+                <div class="container">
+                    <h2 style="margin-top: 1rem; margin-bottom: 2rem;">
+                        Only site members can access Blog & Forum content!
+                    </h2>
+                    <h5 style="margin-top: 1rem; margin-bottom: 2rem;">
+                        For registration details, please email us at
+                        <a href="mailto:contact@data-eng-daily.com">contact@data-eng-daily.com</a> or use the
+                        <a href="about.html#contact-form">Contact Form in our About page.</a>
+                    </h5>
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" id="uname" name="uname" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('login').style.display='none'"
+                            class="cancelbtn">
+                        Cancel
+                    </button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
 </section>
 <div class="container-fluid no-padding">
     <div class="row">
@@ -225,41 +260,23 @@
         </div>
     </section>
 </div>
-<div class="login">
-    <div id="login" class="modal">
-        <form class="modal-content animate">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
-            </div>
-            <div class="container">
-                <h2 style="margin-top: 1rem; margin-bottom: 2rem;">
-                    Only site members can access Blog & Forum content!
-                </h2>
-                <h5 style="margin-top: 1rem; margin-bottom: 2rem;">
-                    For registration details, please email us at
-                    <a href="mailto:contact@data-eng-daily.com">contact@data-eng-daily.com</a> or use the
-                    <a href="about.html#contact-form">Contact Form in our About page.</a>
-                </h5>
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" id="uname" name="uname" required>
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
-                <button type="submit">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-            </div>
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">
-                    Cancel
-                </button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-        </form>
-    </div>
-</div>
 <footer>
-    <button>Subscribe to our daily digest!</button>
+    <div class="row">
+        <div class="col-10 offset-1">
+            <span style="margin-left: 2rem; margin-right: 2rem;">© 2021 Data Engineering Daily</span>
+            <button class="btn btn-info btn-lg" style="padding: 1rem; margin-left: 2rem; margin-right: 2rem;">Subscribe
+                to our daily digest!
+            </button>
+            <span id="social_media_icons" style="margin-left: 2rem; margin-right: 2rem;">
+                <a href="http://facebook.com/data-engineering-daily" class="fa fa-facebook social-media-button"></a>
+                <a href="http://twitter.com/data-engineering-daily" class="fa fa-twitter social-media-button"></a>
+                <a href="http://instagram.com/data-engineering-daily" class="fa fa-instagram social-media-button"></a>
+                <a href="http://youtube.com/data-engineering-daily" class="fa fa-youtube social-media-button"></a>
+                <a href="http://linkedin.com/data-engineering-daily" class="fa fa-linkedin social-media-button"></a>
+            </span>
+        </div>
+    </div>
+
 </footer>
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
