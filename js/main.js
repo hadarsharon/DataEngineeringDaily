@@ -8,6 +8,4 @@ function getDateTime() {
     setTimeout(getDateTime, 1000);
 }
 
-$(window).on('load', function () {
-    getDateTime();
-});
+getDateTime();

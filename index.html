@@ -29,54 +29,38 @@
 
 <body>
 
-<div id="top-placeholder">
-    <!-- Placeholder div to be populated with HTML from top.html
-    (top of the page i.e. navigation bar and extras, is the same for all pages, therefore no reason to copy & paste it)
-    <script>
-        $(function () {
-            $("#top-placeholder").load("templates/top.html");
-        });
-    </script>
-    -->
-    <!-- TOP SECTION OF THE PAGE - LOGO, TITLE, NAVIGATION BAR, SUBSCRIPTION... -->
-    <div id="top" class="container-fluid no-padding" style="background-image: url('img/background-cropped.jpg');">
-        <div class="row top-section">
-            <!-- Data Engineering Daily Logo Box -->
-            <div class="col-3 d-flex align-items-center justify-content-center">
-                <a href="index.html">
-                    <img id="data-engineering-daily-logo" src="img/logo.png"
-                         alt="The Data Engineering Daily Website Logo">
-                </a>
-            </div>
-            <!-- Navigation Bar -->
-            <div class="col-6 d-flex align-items-center justify-content-center">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="row">
+<section id="top" class="container-fluid no-padding" style="background-image: url('img/background-cropped.jpg');">
+    <div class="row top-section">
+        <!-- Data Engineering Daily Logo Box -->
+        <div class="col-3 d-flex align-items-center justify-content-center">
+            <a href="index.html">
+                <img id="data-engineering-daily-logo" src="img/logo.png"
+                     alt="The Data Engineering Daily Website Logo">
+            </a>
+        </div>
+        <!-- Navigation Bar -->
+        <div class="col-6 d-flex align-items-center justify-content-center">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div id="navbar-buttons" class="row">
+                    <script id="navbar-buttons-handlebars-template" type="text/x-handlebars-template">
+                        {{#each buttons}}
                         <div class="col nav-button-div">
-                            <a class="nav-link nav-button" href="about.html"><span>About </span></a>
+                            <a class="nav-link nav-button" href="about.html"><span>{{this}} </span></a>
                         </div>
-                        <div class="col nav-button-div">
-                            <a class="nav-link nav-button" href="news.html"><span>News </span></a>
-                        </div>
-                        <div class="col nav-button-div">
-                            <a class="nav-link nav-button" href="guides.html"><span>Guides & Tutorials </span></a>
-                        </div>
-                        <div class="col nav-button-div">
-                            <a class="nav-link nav-button" href="quizzes.html"><span>Quizzes </span></a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <!-- Subscription, Time and Search -->
-            <div class="col-3 d-flex align-items-center justify-content-center">
-                <div id="date-and-time-div" class="current-date-and-time">
-                    <span id="current-date"></span>
-                    <span id="current-time"></span>
+                        {{/each}}
+                    </script>
                 </div>
+            </nav>
+        </div>
+        <!-- Subscription, Time and Search -->
+        <div class="col-3 d-flex align-items-center justify-content-center">
+            <div id="date-and-time-div" class="current-date-and-time">
+                <span id="current-date"></span>
+                <span id="current-time"></span>
             </div>
         </div>
     </div>
-</div>
+</section>
 <div class="container-fluid no-padding">
     <div class="row">
         <div class="col-12 rss-feed-box">
@@ -102,25 +86,16 @@
             <div class="top-news-hot-discussions-box">
                 <h5 style="text-align: center;">&#128240;&nbsp;Top News</h5>
                 <hr>
-                <ul>
-                    <li class="top-news">
+                <ul id="top-news-list">
+                    <script id="top-news-handlebars-template" type="text/x-handlebars-template">
+                        {{#each news}}
+                        <li class="top-news">
                         <span class="bullet-data">
-                            <a href="#">Python 3.9 rolls out, new features revealed, summary & references inside!</a>
+                            <a href="#">{{{this}}}</a>
                         </span>
-                    </li>
-                    <li class="top-news">
-                        <span class="bullet-data">
-                            <a href="#">NumPy 1.20 Released with Runtime SIMD Support and Type Annotations</a>
-                        </span>
-                    </li>
-                    <li class="top-news">
-                        <span class="bullet-data">
-                            <a href="#">
-                                <b>[Blog]</b> - How I built a robust, fully-automated data pipeline testing infrastructure using
-                                Airflow and Great Expectations
-                            </a>
-                        </span>
-                    </li>
+                        </li>
+                        {{/each}}
+                    </script>
                 </ul>
             </div>
         </div>
@@ -375,8 +350,8 @@
 </footer>
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
-<script src="js/main.js" defer></script>
-<script src="js/index.js" defer></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
 </body>
 
 </html>

@@ -55,11 +55,48 @@ function scrollSlide(section, direction) {
     }
 }
 
-$(window).on('load', function () {
-    let slideBoxes;
-    do {
-        slideBoxes = $(".slidebox-homepage");
-    }
-    while (slideBoxes.length < 2)
-    alternateSlideItems(slideBoxes);
-});
+let templateObjects = [
+    {
+        template: '#navbar-buttons-handlebars-template',
+        context: {
+            "buttons": [
+                "About",
+                "News",
+                "Guides & Tutorials",
+                "Quizzes"
+            ]
+        },
+        target: '#navbar-buttons'
+    },
+    {
+        template: '#top-news-handlebars-template',
+        context: {
+            "news": [
+                "Python 3.9 rolls out, new features revealed, summary & references inside!",
+                "NumPy 1.20 Released with Runtime SIMD Support and Type Annotations",
+                "<b>[Blog]</b> - How I built a robust, fully-automated data pipeline testing infrastructure using Airflow and Great Expectations",
+            ]
+        },
+        target: '#top-news-list'
+    },
+];
+
+let template;
+let templateScript;
+let context;
+let html;
+
+for (const templateObject of templateObjects) {
+    template = $(templateObject.template).html();
+    templateScript = Handlebars.compile(template);
+    context = templateObject.context
+    html = templateScript(context);
+    $(templateObject.target).append(html);
+}
+
+let slideBoxes;
+do {
+    slideBoxes = $(".slidebox-homepage");
+}
+while (slideBoxes.length < 2)
+alternateSlideItems(slideBoxes);
