@@ -76,9 +76,13 @@ let templateObjectsIndex = [
         template: '#top-news-handlebars-template',
         context: {
             "news": [
-                "Python 3.9 rolls out, new features revealed, summary & references inside!",
-                "NumPy 1.20 Released with Runtime SIMD Support and Type Annotations",
-                "<b>[Blog]</b> - How I built a robust, fully-automated data pipeline testing infrastructure using Airflow and Great Expectations",
+                {"news-text": "Python 3.9 rolls out, new features revealed, summary & references inside!"},
+                {"news-text": "NumPy 1.20 Released with Runtime SIMD Support and Type Annotations"},
+                {
+                    "news-text": "<b>[Blog]</b> - How I built a robust, fully-automated data pipeline testing " +
+                        "infrastructure using Airflow and Great Expectations",
+                    "news-onclick": "document.getElementById('login').style.display='block'"
+                },
             ]
         },
         target: '#top-news-list'

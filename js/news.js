@@ -5,19 +5,46 @@ let templateObjectsNews = [
             "newsButtons": [
                 {
                     "button-id": "apache-airflow-news-button",
+                    "button-class": "btn-outline-info",
                     "target-modal": "apache-airflow-modal",
-                    "button-text": "Apache Airflow <b>2.0</b> is finally here!"
+                    "button-text": "Apache Airflow <b>2.0</b> is finally here!",
+                    "button-image": "apache-airflow-button.png"
                 },
                 {
                     "button-id": "julia-pkg-news-button",
+                    "button-class": "btn-outline-success",
                     "target-modal": "julia-pkg-modal",
-                    "button-text": "Julia has a new <b><i>Pkg</i></b> Manager"
+                    "button-text": "Julia has a new <b><i>Pkg</i></b> Manager",
+                    "button-image": "julia-pkg-button.png"
                 },
                 {
                     "button-id": "apache-spark-news-button",
+                    "button-class": "btn-outline-danger",
                     "target-modal": "apache-spark-modal",
-                    "button-text": "A Sneak Peek into Apache Spark <b>3.0</b>"
+                    "button-text": "A Sneak Peek into Apache Spark <b>3.0</b>",
+                    "button-image": "apache-spark-button.png"
                 },
+                {
+                    "button-id": "hadoop-button",
+                    "button-class": "btn-outline-warning",
+                    "target-modal": "hadoop-modal",
+                    "button-text": "The state of Hadoop going into 2021",
+                    "button-image": "hadoop-button.png"
+                },
+                {
+                    "button-id": "python-button",
+                    "button-class": "btn-outline-primary",
+                    "target-modal": "python-modal",
+                    "button-text": "Python <b>3.9</b> rolls out; What's new?",
+                    "button-image": "python-button.png"
+                },
+                {
+                    "button-id": "numpy-button",
+                    "button-class": "btn-outline-secondary",
+                    "target-modal": "numpy-modal",
+                    "button-text": "NumPy <b>1.20</b> released - More Info inside!",
+                    "button-image": "numpy-button.png"
+                }
             ]
         },
         target: '#news-buttons'
