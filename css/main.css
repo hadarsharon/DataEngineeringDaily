@@ -109,3 +109,15 @@ footer {
     border: 2px solid dimgrey;
     border-radius: 2rem;
 }
+
+a.nostyle:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
