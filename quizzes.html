@@ -128,9 +128,21 @@
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <article>
-                                {{{modal-content}}}
-                            </article>
+                            <div>
+                                <ol>
+                                    {{#each questions}}
+                                    <li>
+                                        <h5 class="quiz-question">{{{question}}}</h5>
+                                        {{#each answers}}
+                                        <input type="radio" id="{{../../modal-id}}_q{{@../index}}_a{{@index}}"
+                                               name="{{../../modal-id}}_q{{@../index}}"
+                                               value="{{#if this.[1]}}1{{else}}0{{/if}}">
+                                        <label for="{{../../modal-id}}_q{{@../index}}_a{{@index}}">{{this.[0]}}</label><br>
+                                        {{/each}}
+                                    </li>
+                                    {{/each}}
+                                </ol>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
