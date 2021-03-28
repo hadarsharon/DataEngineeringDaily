@@ -17,7 +17,11 @@ let templateObjects = [
                 {"text": "News", "button-link": "news.html"},
                 {"text": "Guides & Tutorials", "button-link": "guides.html"},
                 {"text": "Quizzes", "button-link": "quizzes.html"},
-                {"text": "Forum", "button-link": "#"}
+                {
+                    "text": "Forum",
+                    "button-link": "#",
+                    "button-onclick": "document.getElementById('login').style.display='block'"
+                }
             ]
         },
         target: '#navbar-buttons'

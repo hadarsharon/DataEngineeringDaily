@@ -43,7 +43,9 @@
                     <script id="navbar-buttons-handlebars-template" type="text/x-handlebars-template">
                         {{#each buttons}}
                         <div class="col nav-button-div">
-                            <a class="nav-link nav-button" href="{{button-link}}"><span>{{text}} </span></a>
+                            <a class="nav-link nav-button" href="{{button-link}}" onClick="{{button-onclick}}">
+                                <span>{{text}} </span>
+                            </a>
                         </div>
                         {{/each}}
                     </script>
