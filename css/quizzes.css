@@ -11,6 +11,11 @@
     margin: 2rem;
 }
 
+/*
+Add a little floating animation to the introductory message at the beginning of the quizzes page
+This conveys the idea of fun and interactivity
+ */
+
 .floating {
     animation-name: floating;
     animation-duration: 3s;
