@@ -72,6 +72,7 @@ function scrollSlide(section, direction) {
     }
 }
 
+// Elements in the newsFeed array appear in the "RSS Feed" marquee running under the navigation bar
 let newsFeed = [
     "PyTorch 1.8 Released; Release Includes Distributed Training Updates and AMD ROCm Support",
     "Google Open-Sources AutoML Algorithm Model Search",
@@ -81,6 +82,8 @@ let newsFeed = [
     "CNCF Approves Kubernetes Edge Computing Platform KubeEdge as Incubating Project"
 ];
 
+
+// Handlebars templates to be rendered with content
 let templateObjectsIndex = [
     {
         template: '#rss-feed-handlebars-template',
@@ -199,6 +202,7 @@ let templateObjectsIndex = [
     }
 ];
 
+// Render all Handlebars templates with respective content
 let templateIndex;
 let templateScriptIndex;
 let contextIndex;
@@ -212,6 +216,10 @@ for (const templateObject of templateObjectsIndex) {
     $(templateObject.target).append(htmlIndex);
 }
 
+/*
+Activate automatic sliding/carousel behaviour of slideshows (events, news)
+as soon as the page loads and the script is executed
+ */
 let slideBoxes;
 do {
     slideBoxes = $(".slidebox-homepage");
