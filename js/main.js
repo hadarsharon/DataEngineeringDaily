@@ -1,4 +1,8 @@
 function getDateTime() {
+    /*
+    This function populates the date/time section at the right edge of the navigation bar at all pages
+    It basically takes the current date and time and updates the respective HTML elements in 1 second intervals
+     */
     if ($('#current-date').length) {
         $("#current-date").html(new Date().toLocaleDateString());
     }
@@ -8,6 +12,7 @@ function getDateTime() {
     setTimeout(getDateTime, 1000);
 }
 
+// Handlebars templates to be rendered with content
 let templateObjects = [
     {
         template: '#navbar-buttons-handlebars-template',
@@ -28,6 +33,7 @@ let templateObjects = [
     }
 ]
 
+// Render all Handlebars templates with respective content
 let template;
 let templateScript;
 let context;
@@ -41,4 +47,7 @@ for (const templateObject of templateObjects) {
     $(templateObject.target).append(html);
 }
 
+/*
+Activate automatic date/time update as soon as the page loads and the script is executed
+ */
 getDateTime();
