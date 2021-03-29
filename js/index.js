@@ -1,22 +1,31 @@
 function alternateSlideItems(slideBoxes) {
+    // This function takes care of the automatic "carousel"/"slideshow" behaviour of both news and events slideboxes
     let slideBoxChildren = [];
+    // Each section probably different number of elements, so keep track of them with separate counters
     let counters = []
     for (const slideBox of slideBoxes) {
+        /*
+        Since I'm using Handlebars.js, and it is a child of the slideshow div,
+        I must filter out the <script> element so that it's not part of the alternating slideshow
+        */
         slideBoxChildren.push(Array.from(slideBox.children).filter(element => element.nodeName.toLowerCase() !== "script"));
         counters.push(0);
     }
+    // For each slidebox, activate the first slide item ("child"), after having deactivated all the rest
     slideBoxChildren.forEach(function (children, i) {
         children.forEach(function (child) {
             child.classList.remove('active');
         });
         children[counters[i]].classList.add('active');
     })
+    // This part moves the slideshow forward in a 6 second interval loop
     setInterval(
         () => {
             slideBoxChildren.forEach(function (children, i) {
                 children.forEach(function (child) {
                     child.classList.remove('active');
                 });
+                // If we reached the end - start from the beginning (0)
                 counters[i] = counters[i] === (children.length - 1) ? 0 : counters[i] + 1
                 children[counters[i]].classList.add('active');
             })
@@ -25,6 +34,10 @@ function alternateSlideItems(slideBoxes) {
 }
 
 function scrollSlide(section, direction) {
+    /*
+    This function takes care of the manual "carousel"/"slideshow" slide of both news and events slideboxes
+    (manual sliding by using the arrows)
+     */
     let slides;
     let toActivate;
     let toDeactivate;
@@ -33,24 +46,28 @@ function scrollSlide(section, direction) {
     } else if (section.toLowerCase() === 'events') {
         slides = $('#slidebox-events');
     }
-    if (!slides) {
+    if (!slides) { // if invalid section passed from HTML - ignore
         return;
     }
+    // Find the active element first and deactivate it, before activating the next/previous element
     toDeactivate = slides.find('.active');
     Array.from(toDeactivate).forEach(function (element) {
         element.classList.remove('active')
     });
-
+    // Determine whether or not next/previous element needs to be activated
     switch (direction.toLowerCase()) {
         case 'right':
+            // If we reached the end - activate first element
             toActivate = toDeactivate.index() < (slides.children().length - 1) ? (toDeactivate.index() + 1) : 0;
             slides.children()[toActivate].classList.add('active');
             break;
         case 'left':
+            // If we reached the beginning - activate last element
             toActivate = toDeactivate.index() > 0 ? (toDeactivate.index() - 1) : (slides.children().length - 1);
             slides.children()[toActivate].classList.add('active');
             break;
         default:
+            // If invalid direction was passed - revert the deactivation made earlier and do nothing else
             toDeactivate[0].classList.add('active');
     }
 }
