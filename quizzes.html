@@ -129,7 +129,7 @@
                         </div>
                         <div class="modal-body">
                             <div>
-                                <ol>
+                                <ol id="quiz-list">
                                     {{#each questions}}
                                     <li>
                                         <h5 class="quiz-question">{{{question}}}</h5>
@@ -137,7 +137,9 @@
                                         <input type="radio" id="{{../../modal-id}}_q{{@../index}}_a{{@index}}"
                                                name="{{../../modal-id}}_q{{@../index}}"
                                                value="{{#if this.[1]}}1{{else}}0{{/if}}">
-                                        <label for="{{../../modal-id}}_q{{@../index}}_a{{@index}}">{{{this.[0]}}}</label><br>
+                                        <label for="{{../../modal-id}}_q{{@../index}}_a{{@index}}">
+                                            {{{this.[0]}}}&nbsp;
+                                        </label><br>
                                         {{/each}}
                                     </li>
                                     {{/each}}
@@ -148,8 +150,12 @@
                             <span id="score">
                                 <span id="pointsScored"></span>
                             </span>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Discard</button>
-                            <button type="button" class="btn btn-success" onclick="calculateScore()">Calculate Score</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">
+                                Discard
+                            </button>
+                            <button type="button" class="btn btn-success" onClick="calculateScore('#{{modal-id}}')">
+                                Calculate Score
+                            </button>
                         </div>
                     </div>
                 </div>

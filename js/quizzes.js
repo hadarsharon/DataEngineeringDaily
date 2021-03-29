@@ -1,7 +1,31 @@
-function calculateScore(quiz) {
-    let points = 5;
-    let total = 10;
-    $('#pointsScored').html("Your Score: <strong>" + points + "/" + total + "</strong>");
+function calculateScore(modalId) {
+    let quizList = $(modalId).find('#quiz-list');
+    let total = quizList.children().length;
+    let answers;
+    let points = 0;
+    let labelText;
+    for (const question of quizList.children()) {
+        answers = question.getElementsByTagName('input')
+        for (const answer of answers) {
+            if (parseInt(answer.value)) {
+                labelText = $('label[for="' + answer.id + '"]')[0].innerHTML;
+                if (!labelText.includes("✔")) {
+                    $('label[for="' + answer.id + '"]')[0].innerHTML += "&#10004;"
+                }
+                if (answer.checked) {
+                    points++;
+                }
+            } else {
+                if (answer.checked) {
+                    labelText = $('label[for="' + answer.id + '"]')[0].innerHTML;
+                    if (!labelText.includes("❌")) {
+                        $('label[for="' + answer.id + '"]')[0].innerHTML += "&#10060;"
+                    }
+                }
+            }
+        }
+    }
+    $(modalId).find('#pointsScored').html("Your Score: <strong>" + points + "/" + total + "</strong>");
 }
 
 let templateObjectsQuizzes = [
