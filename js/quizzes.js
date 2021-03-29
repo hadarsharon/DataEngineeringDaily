@@ -68,7 +68,7 @@ let templateObjectsQuizzes = [
                                 ["False"],
                                 ["True", true]
                             ]
-                        },
+                        }
                     ]
                 },
                 {
@@ -78,10 +78,10 @@ let templateObjectsQuizzes = [
                         {
                             "question": "Select the SQL clause for setting an upper bound on the number of possible records to be returned from a query",
                             "answers": [
-                                ["STOP"],
-                                ["UNTIL"],
-                                ["BOUND"],
-                                ["LIMIT", true]
+                                ["<code>STOP</code>"],
+                                ["<code>UNTIL</code>"],
+                                ["<code>BOUND</code>"],
+                                ["<code>LIMIT</code>", true]
                             ]
                         },
                         {
@@ -94,9 +94,9 @@ let templateObjectsQuizzes = [
                         {
                             "question": "What SQL clause is used for ordering query results in a descending order?",
                             "answers": [
-                                ["ORDER BY DESC", true],
-                                ["SORT BY DESC"],
-                                ["DIRECT BY DESC"],
+                                ["<code>ORDER BY DESC</code>", true],
+                                ["<code>SORT BY DESC</code>"],
+                                ["<code>DIRECT BY DESC</code>"],
                                 ["There is no such clause, because they are always ordered descending by default."]
                             ]
                         },
@@ -110,12 +110,12 @@ let templateObjectsQuizzes = [
                         {
                             "question": "Select the clause that is <strong><em>NOT</em></strong> a part of ANSI SQL standard",
                             "answers": [
-                                ["DISTINCT"],
-                                ["PIVOT", true],
-                                ["LIKE"],
-                                ["PARTITION BY"]
+                                ["<code>DISTINCT</code>"],
+                                ["<code>PIVOT</code>", true],
+                                ["<code>LIKE</code>"],
+                                ["<code>PARTITION BY</code>"]
                             ]
-                        },
+                        }
                     ]
                 },
                 {
@@ -139,6 +139,47 @@ let templateObjectsQuizzes = [
                             ]
                         },
                         {
+                            "question": "In Python, a tuple can be used as a dictionary key while a list can not.",
+                            "answers": [
+                                ["False"],
+                                ["True", true],
+                            ]
+                        },
+                        {
+                            "question": "Which of the following databases is a key-value store?",
+                            "answers": [
+                                ["Cassandra"],
+                                ["DynamoDB", true],
+                                ["PostgreSQL"],
+                                ["IBM DB2"]
+                            ]
+                        },
+                        {
+                            "question": "Let's assume tables <b>t1</b> and <b>t2</b> have <b>3</b> and <b>5</b> rows respectively." +
+                                "<br>How many records will this query return:<br><code>SELECT * FROM t1 CROSS JOIN t2;</code>",
+                            "answers": [
+                                [8],
+                                [15, true],
+                                [125],
+                                [243]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "modal-id": "advanced-quiz",
+                    "modal-title": "Data Engineering Daily Quiz - <b>Advanced</b>",
+                    "questions": [
+                        {
+                            "question": "Which of the following is <em><strong>NOT</strong></em> a part of REST API operations?",
+                            "answers": [
+                                ["<code>FETCH</code>", true],
+                                ["<code>PATCH</code>"],
+                                ["<code>OPTIONS</code>"],
+                                ["<code>PUT</code>"]
+                            ]
+                        },
+                        {
                             "question": "parquet (the file format) is:",
                             "answers": [
                                 ["Compressed by default and columnar", true],
@@ -157,17 +198,74 @@ let templateObjectsQuizzes = [
                             ]
                         },
                         {
-                            "question": "Let's assume tables <b>t1</b> and <b>t2</b> have <b>3</b> and <b>5</b> rows respectively." +
-                                "<br>How many records will this query return:<br><strong>SELECT * FROM t1 CROSS JOIN t2;</strong>",
+                            "question": "Stored Procedures written in scripting languages such as Perl or Python can import and make use of third party modules",
                             "answers": [
-                                [8],
-                                [15, true],
-                                [125],
-                                [243]
+                                ["False"],
+                                ["True", true]
                             ]
                         },
+                        {
+                            "question": "MapReduce is considered more efficient than Spark because it utilizes in-memory processing, while the latter relies heavily on disk I/O",
+                            "answers": [
+                                ["False", true],
+                                ["True"],
+                            ]
+                        }
                     ]
                 },
+                {
+                    "modal-id": "expert-quiz",
+                    "modal-title": "Data Engineering Daily Quiz - <b>Expert</b>",
+                    "questions": [
+                        {
+                            "question": "Consider the following Python function:<br>" +
+                                "<code>def f(x: List):<br>&nbsp;&nbsp;&nbsp;&nbsp;return map(lambda y: y or 'INVALID', x)</code><br>" +
+                                "What will it return? (type and value respectively)",
+                            "answers": [
+                                ["A Mapping between all the True values in the original list, x, and the string 'INVALID'"],
+                                ["An Iterator constructed from the original list, x, with all True values replaces with 'INVALID'"],
+                                ["An Iterator constructed from the original list, x, with all False values replaces with 'INVALID'", true],
+                                ["A new List constructed from the original list, x, with only 'INVALID' values"]
+                            ]
+                        },
+                        {
+                            "question": "In Amazon S3, each object must have:",
+                            "answers": [
+                                ["A parent folder and a suffix/file extension"],
+                                ["A parent folder, but the suffix/file extension is meaningless"],
+                                ["A suffix/file extension, but the parent folder is meaningless"],
+                                ["Neither a suffix/file extension, nor a parent folder is needed for an object to be valid.", true]
+                            ]
+                        },
+                        {
+                            "question": "In Amazon Redshift, a <code>DISTKEY</code> is:",
+                            "answers": [
+                                ["The column by which the table is sorted within each node"],
+                                ["The column by which the values are distributed to each node within the cluster", true],
+                                ["The column that must be unique and acts as a target for JOIN operations"],
+                                ["The column that defines a key which identifies the table in the schema"]
+                            ]
+                        },
+                        {
+                            "question": "In Scala, a case class is:",
+                            "answers": [
+                                ["Equivalent to a switch statement in other languages such as JavaScript and C++"],
+                                ["A Special type of classes that are initiated with a boolean function that covers multiple conditions/cases"],
+                                ["A Special type of classes that act as simple data containers while reducing boilerplate code", true],
+                                ["An abstract class which all conditional objects in the language must inherit."]
+                            ]
+                        },
+                        {
+                            "question": "Which of the following compression methods is considered the most efficient in terms of file size?",
+                            "answers": [
+                                ["gzip"],
+                                ["bzip2"],
+                                ["xz", true],
+                                ["zlib"]
+                            ]
+                        }
+                    ]
+                }
             ]
         },
         target: '#quizzes-modals'
