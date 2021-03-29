@@ -27,6 +27,7 @@
 </head>
 <body>
 
+<!-- Shared top section - Navigation bar, hidden login/subscription modals etc. -->
 <section id="top" class="container-fluid no-padding" style="background-image: url('img/background-cropped.jpg');">
     <div class="row top-section">
         <!-- Data Engineering Daily Logo Box -->
@@ -52,7 +53,7 @@
                 </div>
             </nav>
         </div>
-        <!-- Subscription, Time and Search -->
+        <!-- Current Date and Time box -->
         <div class="col-3 d-flex align-items-center justify-content-center">
             <div id="date-and-time-div" class="current-date-and-time">
                 <span id="current-date"></span>
@@ -60,6 +61,7 @@
             </div>
         </div>
     </div>
+    <!-- Login modal (hidden by default, opens only when "member content" is clicked -->
     <div class="login">
         <div id="login" class="modal">
             <form class="modal-content animate">
@@ -95,6 +97,7 @@
             </form>
         </div>
     </div>
+    <!-- Subscription modal (hidden by default, opens only when "Subscribe to us" button at footer is clicked -->
     <div class="modal fade" id="subscription-modal">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -134,7 +137,10 @@
     </div>
 </section>
 
+<!-- Main non-shared content begins here -->
+
 <section id="quizzes-section">
+    <!-- Introductory message with nice floating effect -->
     <div class="row">
         <div class="col-10 offset-1 d-flex align-items-center justify-content-center">
             <h1 class="floating" style="margin: 2rem;">
@@ -142,6 +148,7 @@
             </h1>
         </div>
     </div>
+    <!-- Quiz buttons, in ascending order of difficulty - clicking the button opens the quiz modal -->
     <div id="quizzes-buttons">
         <script id="quizzes-handlebars-template" type="text/x-handlebars-template">
             {{#each quizButtons}}
@@ -154,6 +161,7 @@
             {{/each}}
         </script>
     </div>
+    <!-- Quiz modals - here the actual quiz is contained -->
     <div id="quizzes-modals">
         <script id="quizzes-modals-handlebars-template" type="text/x-handlebars-template">
             {{#each quizModals}}
@@ -202,6 +210,7 @@
     </div>
 </section>
 
+<!-- Shared footer section - Copyright statement, "Subscripe to us" button and Social Media links -->
 <footer>
     <div class="row">
         <div class="col-10 offset-1">
@@ -220,6 +229,8 @@
         </div>
     </div>
 </footer>
+
+<!-- Finally, load all relevant JavaScript -->
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
