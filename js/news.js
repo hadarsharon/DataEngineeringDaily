@@ -27,7 +27,7 @@ let templateObjectsNews = [
                 {
                     "button-id": "hadoop-button",
                     "button-class": "btn-outline-warning",
-                    "target-modal": "hadoop-modal",
+                    "button-onclick": "window.open('https://hadoop.apache.org/')",
                     "button-text": "The state of Hadoop going into 2021",
                     "button-image": "hadoop-button.png"
                 },
@@ -41,7 +41,7 @@ let templateObjectsNews = [
                 {
                     "button-id": "numpy-button",
                     "button-class": "btn-outline-secondary",
-                    "target-modal": "numpy-modal",
+                    "button-onclick": "window.open('https://numpy.org/doc/stable/release/1.20.0-notes.html')",
                     "button-text": "NumPy <b>1.20</b> released - see release notes",
                     "button-image": "numpy-button.png"
                 }
