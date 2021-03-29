@@ -29,6 +29,7 @@
 
 <body>
 
+<!-- Shared top section - Navigation bar, hidden login/subscription modals etc. -->
 <section id="top" class="container-fluid no-padding" style="background-image: url('img/background-cropped.jpg');">
     <div class="row top-section">
         <!-- Data Engineering Daily Logo Box -->
@@ -54,7 +55,7 @@
                 </div>
             </nav>
         </div>
-        <!-- Subscription, Time and Search -->
+        <!-- Current Date and Time box -->
         <div class="col-3 d-flex align-items-center justify-content-center">
             <div id="date-and-time-div" class="current-date-and-time">
                 <span id="current-date"></span>
@@ -62,6 +63,7 @@
             </div>
         </div>
     </div>
+    <!-- Login modal (hidden by default, opens only when "member content" is clicked -->
     <div class="login">
         <div id="login" class="modal">
             <form class="modal-content animate">
@@ -97,6 +99,7 @@
             </form>
         </div>
     </div>
+    <!-- Subscription modal (hidden by default, opens only when "Subscribe to us" button at footer is clicked -->
     <div class="modal fade" id="subscription-modal">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -136,7 +139,10 @@
     </div>
 </section>
 
+<!-- Main non-shared content begins here -->
+
 <div class="container-fluid no-padding">
+    <!-- Little "RSS Feed"-style marquee that runs under the navigation bar and displays scrolling news -->
     <div class="row">
         <div class="col-12 rss-feed-box">
             <marquee behavior="scroll" scrollamount="5" direction="left" width="100%">
@@ -148,6 +154,7 @@
             </marquee>
         </div>
     </div>
+    <!-- Introductory message -->
     <div class="row">
         <div class="col-10 offset-1">
             <header style="margin-top: 3rem; margin-bottom: 3rem;">
@@ -159,6 +166,7 @@
         </div>
     </div>
     <section class="row">
+        <!-- "Top News" section that displays the top 3 news items and provides links to them -->
         <div class="col-5 offset-1">
             <div class="top-news-hot-discussions-box">
                 <h5 style="text-align: center;">&#128240;&nbsp;Top News</h5>
@@ -176,6 +184,11 @@
                 </ul>
             </div>
         </div>
+        <!--
+        "Hot Discussions" section that displays the top 3 forum discussions items and provides links to them
+        (One must be "registered" to access the forum content, therefore the login modal will pop up rather than
+        the actual discussions)
+        -->
         <div class="col-5">
             <div class="top-news-hot-discussions-box">
                 <h5 style="text-align: center;">&#128172;&nbsp;Hot Discussions</h5>
@@ -202,6 +215,7 @@
     <div class="col-10 offset-1">
         <hr>
     </div>
+    <!-- "Latest News" slidebox/carousel section that slides and displays different news items -->
     <section class="row">
         <div class="col-10 offset-1 d-flex align-items-center justify-content-center">
             <button id="news-arrow-left" class="arrow-button" style="margin-right: 2rem;"
@@ -272,6 +286,7 @@
     <div class="col-10 offset-1">
         <hr>
     </div>
+    <!-- "Upcoming Events" slidebox/carousel section that slides and displays different news items -->
     <section class="row">
         <div class="col d-flex align-items-center justify-content-center">
             <button id="events-arrow-left" class="arrow-button" style="margin-right: 2rem;"
@@ -299,6 +314,7 @@
     </section>
 </div>
 
+<!-- Shared footer section - Copyright statement, "Subscripe to us" button and Social Media links -->
 <footer>
     <div class="row">
         <div class="col-10 offset-1">
@@ -318,6 +334,7 @@
     </div>
 </footer>
 
+<!-- Finally, load all relevant JavaScript -->
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>

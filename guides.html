@@ -135,57 +135,6 @@
     </div>
 </section>
 
-<!-- Main non-shared content begins here -->
-
-<section class="container-fluid no-padding" style="margin-bottom: 5rem;">
-    <!--
-    News buttons with images that correspond to the actual news - a click of these buttons opens the data modal
-    that contains the respective news item with all the content
-    -->
-    <div id="news-buttons" class="row">
-        <script id="news-buttons-handlebars-template" type="text/x-handlebars-template">
-            {{#each newsButtons}}
-            <div class="col-4 offset-1 d-flex align-items-center justify-content-center news-button">
-                <button id="{{button-id}}" type="button" class="btn {{button-class}} btn-lg btn-block"
-                        style="border-radius: 1rem;"
-                        data-toggle="modal" data-target="#{{target-modal}}" onClick="{{button-onclick}}">
-                    <img class="news-button" src="img/news/{{button-image}}" width="400px" height="200px">
-                    <h3><strong>{{{button-text}}}</strong></h3>
-                </button>
-            </div>
-            {{/each}}
-        </script>
-    </div>
-
-    <!--
-    Here the data modals are declared - they are all hidden by default but appear when the respective button opens them
-    -->
-    <div id="modals">
-        <script id="modals-handlebars-template" type="text/x-handlebars-template">
-            {{#each modals}}
-            <div class="modal fade" id="{{modal-id}}">
-                <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">{{{modal-title}}}</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <article>
-                                {{{modal-content}}}
-                            </article>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{/each}}
-        </script>
-    </div>
-</section>
-
 <!-- Shared footer section - Copyright statement, "Subscripe to us" button and Social Media links -->
 <footer>
     <div class="row">
@@ -210,6 +159,5 @@
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-<script src="js/news.js"></script>
 </body>
 </html>
