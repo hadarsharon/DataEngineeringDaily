@@ -42,7 +42,7 @@ let templateObjectsNews = [
                     "button-id": "numpy-button",
                     "button-class": "btn-outline-secondary",
                     "target-modal": "numpy-modal",
-                    "button-text": "NumPy <b>1.20</b> released - More Info inside!",
+                    "button-text": "NumPy <b>1.20</b> released - see release notes",
                     "button-image": "numpy-button.png"
                 }
             ]
@@ -194,6 +194,44 @@ let templateObjectsNews = [
                                     allowfullscreen>
                             </iframe>
                         </div>
+                        `
+                },
+                {
+                    "modal-id": "python-modal",
+                    "modal-title": "Python <b>3.9</b> rolls out; What's new?",
+                    "modal-content":
+                        `
+                        <p>
+                        Python 3.9.0 is the newest major release of the Python programming language, and it contains many new features and optimizations.
+                        </p>
+    
+                        <h5><u>Installer news</u></h5>
+                        <p>
+                        This is the first version of Python to default to the 64-bit installer on Windows. The installer now also actively disallows installation on Windows 7. Python 3.9 is incompatible with this unsupported version of Windows.
+                        </p>
+                        
+                        <h6>Major new features of the 3.9 series, compared to 3.8</h6>
+                        Some of the new major new features and changes in Python 3.9 are:
+                        
+                        <ul>
+                        <li>PEP 573, Module State Access from C Extension Methods</li>
+                        <li>PEP 584, Union Operators in dict</li>
+                        <li>PEP 585, Type Hinting Generics In Standard Collections</li>
+                        <li>PEP 593, Flexible function and variable annotations</li>
+                        <li>PEP 602, Python adopts a stable annual release cadence</li>
+                        <li>PEP 614, Relaxing Grammar Restrictions On Decorators</li>
+                        <li>PEP 615, Support for the IANA Time Zone Database in the Standard Library</li>
+                        <li>PEP 616, String methods to remove prefixes and suffixes</li>
+                        <li>PEP 617, New PEG parser for CPython</li>
+                        <li>BPO 38379, garbage collection does not block on resurrected objects;</li>
+                        <li>BPO 38692, os.pidfd_open added that allows process management without races and signals;</li>
+                        <li>BPO 39926, Unicode support updated to version 13.0.0;</li>
+                        <li>BPO 1635741, when Python is initialized multiple times in the same process, it does not leak memory anymore;</li>
+                        <li>A number of Python builtins (range, tuple, set, frozenset, list, dict) are now sped up using PEP 590 vectorcall;</li>
+                        <li>A number of Python modules (_abc, audioop, _bz2, _codecs, _contextvars, _crypt, _functools, _json, _locale, operator, resource, time, _weakref) now use multiphase initialization as defined by PEP 489;</li>
+                        <li>A number of standard library modules (audioop, ast, grp, _hashlib, pwd, _posixsubprocess, random, select, struct, termios, zlib) are now using the stable ABI defined by PEP 384.</li>
+                        </ul>
+                        <h6>You can find a more comprehensive list in this release's <a href="https://docs.python.org/release/3.9.0/whatsnew/3.9.html">"What's New"</a> document.</h6>
                         `
                 }
             ]
