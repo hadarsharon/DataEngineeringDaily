@@ -206,6 +206,44 @@
     }
 }
 
+.newsletter-subscription {
+    padding: 9rem 0;
+    background: #17a2b8;
+}
+
+.newsletter-subscription .subscription-content {
+    position: relative;
+    margin: 0 auto;
+    max-width: 90%;
+    text-align: center;
+    z-index: 2;
+}
+
+.newsletter-subscription .subscription-content h1 {
+    margin-bottom: 2rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.newsletter-subscription .subscription-content .form-control {
+    border-color: transparent;
+    border-radius: 1rem 0 0 1rem;
+    height: 3rem;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-subscription .subscription-content .form-control:focus {
+    border-color: #243c4f;
+    box-shadow: none;
+}
+
+.newsletter-subscription .subscription-content .btn {
+    border-radius: 0 1rem 1rem 0;
+    min-height: 3rem;
+    background: #243c4f;
+    color: #fff;
+}
+
 .rss-feed-box {
     background-color: rgba(63, 191, 191, 0.3);
     border-bottom: 2px outset cadetblue;
