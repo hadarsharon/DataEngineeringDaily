@@ -4,7 +4,7 @@
     padding: 1rem;
 }
 
-/* Replace list items' default bullet with star in Top News section */
+/* Replace list items' default bullet with "star" bullet in Top News section */
 
 li.top-news {
     list-style: "\2B50";
@@ -12,7 +12,7 @@ li.top-news {
     right: 1rem;
 }
 
-/* Replace list items' default bullet with fire in Hot Discussions section */
+/* Replace list items' default bullet with "fire" in Hot Discussions section */
 
 li.hot-discussions {
     list-style: "\1F525";
@@ -38,6 +38,8 @@ li.hot-discussions {
     border-radius: 1rem;
     padding: 2rem;
 }
+
+/* News slidebox content - display only one news item at a time and create a sliding effect */
 
 .slideitem {
     position: absolute;
@@ -70,6 +72,11 @@ li.hot-discussions {
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
 }
 
+/*
+Create a vertical rule (similar to an <hr> element)
+between the news item header and the image within the slideshow box
+*/
+
 .vr {
     border-left: 0.3rem solid rgba(20, 25, 50, 0.3);
     border-radius: 100rem;
@@ -77,6 +84,8 @@ li.hot-discussions {
     margin-left: 2rem;
     margin-right: 3rem;
 }
+
+/* Arrow buttons to slide the news/events slideshows */
 
 .arrow-button {
     padding: 0;
