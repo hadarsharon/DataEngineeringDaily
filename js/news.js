@@ -1,3 +1,4 @@
+// Handlebars templates to be rendered with content
 let templateObjectsNews = [
     {
         template: '#news-buttons-handlebars-template',
@@ -240,6 +241,7 @@ let templateObjectsNews = [
     },
 ]
 
+// Render all Handlebars templates with respective content
 let templateNews;
 let templateScriptNews;
 let contextNews;

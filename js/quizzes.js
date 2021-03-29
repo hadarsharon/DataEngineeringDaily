@@ -1,22 +1,35 @@
 function calculateScore(modalId) {
+    // This function calculates the score based on the user's answers, once he/she clicks the submit button
+    // First, get the respective quiz element (there are multiple quizzes)
     let quizList = $(modalId).find('#quiz-list');
+    // Total number of points == number of questions == number of list items (each question is worth 1 point)
     let total = quizList.children().length;
     let answers;
     let points = 0;
     let labelText;
     for (const question of quizList.children()) {
+        // For each question, get all available answers
         answers = question.getElementsByTagName('input')
         for (const answer of answers) {
+            // Iterate over the answers and check their validity (values 0, 1 mean wrong and correct, respectively)
             if (parseInt(answer.value)) {
+                /*
+                Mark the correct answers with a little checkmark
+                (also make sure it's not already added in case the user makes multiple clicks,
+                otherwise we'll duplicated checkmarks)
+                */
                 labelText = $('label[for="' + answer.id + '"]')[0].innerHTML;
                 if (!labelText.includes("✔")) {
                     $('label[for="' + answer.id + '"]')[0].innerHTML += "&#10004;"
                 }
+                // If the user checked the correct answer - award him/her a point
                 if (answer.checked) {
                     points++;
                 }
             } else {
+                // The wrong answers are marked with an X icon only if the user checked them
                 if (answer.checked) {
+                    // Again, make sure the X icon is not already added to prevent duplicates
                     labelText = $('label[for="' + answer.id + '"]')[0].innerHTML;
                     if (!labelText.includes("❌")) {
                         $('label[for="' + answer.id + '"]')[0].innerHTML += "&#10060;"
@@ -25,9 +38,11 @@ function calculateScore(modalId) {
             }
         }
     }
+    // Finally, add a little message displaying the obtained score
     $(modalId).find('#pointsScored').html("Your Score: <strong>" + points + "/" + total + "</strong>");
 }
 
+// Handlebars templates to be rendered with content
 let templateObjectsQuizzes = [
     {
         template: '#quizzes-handlebars-template',
@@ -296,6 +311,7 @@ let templateObjectsQuizzes = [
     }
 ]
 
+// Render all Handlebars templates with respective content
 let templateQuizzes;
 let templateScriptQuizzes;
 let contextQuizzes;
