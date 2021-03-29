@@ -145,7 +145,11 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <span id="score">
+                                <span id="pointsScored"></span>
+                            </span>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Discard</button>
+                            <button type="button" class="btn btn-success" onclick="calculateScore()">Calculate Score</button>
                         </div>
                     </div>
                 </div>

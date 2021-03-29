@@ -7,6 +7,10 @@
     text-decoration: underline;
 }
 
+#pointsScored {
+    margin: 2rem;
+}
+
 .floating {
     animation-name: floating;
     animation-duration: 3s;
